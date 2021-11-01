@@ -9,9 +9,9 @@
     <div class="container">
         <h1>My BBS</h1>
         <ul>
-            <li>Title</li>
-            <li>Title</li>
-            <li>Title</li>
+            <li>{{ $posts[0]}}</li>
+            <li>{{ $posts[1]}}</li>
+            <li>{{ $posts[2]}}</li>
         </ul>
     </div>
 </body>
