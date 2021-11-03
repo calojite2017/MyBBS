@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>My ブログ</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url('css/style.css') }}">
 </head>
 <body>
     <div class="container">
@@ -11,7 +11,7 @@
         <ul>
             @forelse ($posts as $index => $post)
                 <li>
-                    <a href="/posts/{{ $index }}">
+                    <a href="{{ route('posts.show', $index) }}">
                       {{ $post }}
                     </a>
                 </li>
