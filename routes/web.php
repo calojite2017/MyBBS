@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TopPageServer;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,12 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PostController::class, 'index'])
-    ->name('posts.index');
+// トップページ
+Route::get('/', [TopPageServer::class, 'index'])
+    ->name('index');
 
-Route::get('/posts/{id}', [PostController::class, 'show'])
+// 掲示板
+Route::get('posts/index', [PostController::class, 'index'])
+    ->name('posts.index');
+Route::get('posts/index/{id}', [PostController::class, 'show'])
     ->name('posts.show');

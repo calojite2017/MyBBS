@@ -14,7 +14,7 @@ class PostController extends Controller
 
     public function index()
     {
-        return view('index')
+        return view('posts.index')
             ->with(['posts' => $this->posts]);
     }
 

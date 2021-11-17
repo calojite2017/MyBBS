@@ -1,11 +1,12 @@
-<x-layout>
-    <x-slot name="title">
-        {{ $post }} - My ブログ
-    </x-slot>
+@extends('layouts.main')
 
+@section('title', $post )
+
+@section('content')
+<article>
+    <h1>{{ $post }}</h1>
     <div class="back-link">
         &laquo; <a href="{{ route('posts.index') }}">もどる</a>
     </div>
-
-    <h1>{{ $post }}</h1>
-</x-layout>
+</article>
+@endsection
