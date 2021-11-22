@@ -10,10 +10,10 @@
         </div>
         <div class="common-body">
             <div class="posts-flex">
-                    @forelse ($posts as $index => $post)
+                    @forelse ($posts as $post)
                                 <div class="flex-item">
-                                <a href="{{ route('posts.show', $index) }}"><p>
-                                {{ $post }}</p>
+                                <a href="{{ route('posts.show', $post) }}"><p>
+                                {{ $post->title }}</p>
                                 </a>
                             </div>
                     @empty

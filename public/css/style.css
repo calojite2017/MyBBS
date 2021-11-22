@@ -228,10 +228,10 @@
 .posts-flex {
     display: flex;
     display:-webkit-flex;
-    width: 300px;
+    width: 100%;
     height: auto;
 }
-.flex-item {
+.common-body .posts-flex .flex-item {
     background-color: rgb(197, 197, 197);
     border-radius: 10px;
     margin: 5px;
@@ -247,7 +247,13 @@
     text-decoration: none;
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: 15px;
+}
+/******************** show.php Post Body  ********************/
+.post-body p {
+    font-size: 17px;
+    font-family: 'Courier', sans-serif;
+    line-height: 1.6;
 }
 /******************** Blogs Parts  ********************/
 .common-body .blogs-body a{

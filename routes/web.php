@@ -22,7 +22,7 @@ Route::get('/', [TopPageServer::class, 'index'])
 
 // 掲示板
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
-Route::get('posts/{id}', [PostController::class, 'show'])->name('posts.show');
+Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
 // ブログ
 Route::get('blogs', [BlogController::class, 'index'])->name('blogs.index');
