@@ -1,5 +1,9 @@
 <header>
     <div id="Hd">
+        {{-- タイトル --}}
+        <div class="top-title">
+            <h1><a href="{{ route('index') }}">My Blog</a></h1>
+        </div>
         {{-- ハンバーガーメニュー --}}
         <div class="hamburger-menu">
             <input type="checkbox" id="menu-btn-check">

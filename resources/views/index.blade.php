@@ -4,8 +4,8 @@
 
 @section('content')
 <article>
-    <div class="top-title">
-        <h1>My Blog</h1>
+    <div class="top-board">
+        <a href="{{ route('posts.index') }}"><img src="{{ asset('images/book.png') }}"></a>
     </div>
 </article>
 @endsection

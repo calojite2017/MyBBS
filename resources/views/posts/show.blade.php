@@ -4,7 +4,7 @@
 
 @section('content')
 <article>
-    <div class="posts-contents">
+    <div class="posts contents">
         <div class="common-title">
             <h1>{{ $post }}</h1>
         <div>

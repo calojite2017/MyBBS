@@ -4,7 +4,7 @@
 
 @section('content')
 <article>
-    <div class="board-contents">
+    <div class="board contents">
         <div class="common-title">
             <h1>On Board</h1>
         </div>
