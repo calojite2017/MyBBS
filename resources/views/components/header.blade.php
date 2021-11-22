@@ -15,7 +15,10 @@
                         <a href="{{ route('index') }}">TOP</a>
                     </li>
                     <li>
-                        <a href="{{ route('posts.index') }}">On Board</a>
+                        <a href="{{ route('posts.index') }}">Boards</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('blogs.index') }}">Blogs</a>
                     </li>
                 </ul>
             </div>
