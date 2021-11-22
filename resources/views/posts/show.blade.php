@@ -1,12 +1,19 @@
 @extends('layouts.main')
 
-@section('title', $post )
+@section('title', $post->title)
 
 @section('content')
 <article>
-    <h1>{{ $post }}</h1>
-    <div class="back-link">
-        &laquo; <a href="{{ route('posts.index') }}">もどる</a>
+    <div class="posts contents">
+        <div class="common-title">
+            <h1>{{ $post->title }}</h1>
+        <div>
+        <div class="post-body">
+            <p>{{ $post->body }}</p>
+        </div>
+        <div class="common-back-link">
+            &laquo; <a href="{{ route('posts.index') }}">もどる</a>
+        </div>
     </div>
 </article>
 @endsection

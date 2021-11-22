@@ -1,29 +1,80 @@
+/******************** header ********************/
 #Hd {
     height: 100px;
+    font-family: 'Amatic SC', cursive;
+    z-index: 0;
 }
 
-h1 {
-    border-bottom: 1px solid;
-    font-size: 18px;
-    margin: 16px 0;
+/******************** Common ********************/
+.contents {
+    margin: 10px 40px;
+}
+
+.common-title h1 {
+    color: grey;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    border-bottom: 1px solid grey;
+    padding-left: 10px;
+}
+
+.common-body {
+    font-family: 'Courier', sans-serif;
+    font-size: 25px;
+}
+
+.common-body li {
+    list-style: none;
+}
+.common-body li a {
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+}
+.common-body li a:hover{
+    color: rgba(94, 94, 8, 0.466);
+}
+
+.common-back-link a {
+    font-family: 'Courier', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+    font-size: 15px
+}
+.common-back-link a:hover {
+    color: rgba(94, 94, 8, 0.466);
+}
+.common-back-link {
+    font-family: 'Courier', sans-serif;
+}
+/******************** Title ********************/
+.top-title h1 {
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    /* border-bottom: 1px solid grey; */
+    font-size: 50px;
     padding-bottom: 8px;
+    font-family: 'Courier', sans-serif;
+    /* font-family: 'Amatic SC', cursive; */
 }
 
-li {
-    line-height: 1.6;
-    margin-bottom: 8px;
+.top-title a {
+    text-decoration: none;
+    color: rgb(63, 62, 62);
 }
 
-.back-link {
-    font-size: 14px;
+.top-title a:hover {
+    color: rgba(94, 94, 8, 0.466);
 }
 
-/* ハンバーガーメニュー */
+/******************** Global hamburger menu ********************/
 .menu-btn {
     /* ここ注意↓ */
     position: fixed;
     /* ここ注意↓ */
     right: 10px;
+    top: 15px;
     display: flex;
     height: 60px;
     width: 60px;
@@ -45,6 +96,7 @@ li {
     /* ここ注意↓ */
     transition: all 0.5s ease;
 }
+
 .menu-btn span:before,
 .menu-btn span:after {
     content: '';
@@ -97,11 +149,13 @@ li {
 .menu-content ul li {
     border-bottom: solid 1px grey;
     list-style: none;
+    line-height: 1.6;
+    margin-bottom: 8px;
 }
 .menu-content ul li a {
     display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: 30px;
     box-sizing: border-box;
     color:grey;
     text-decoration: none;
@@ -122,4 +176,107 @@ li {
 
 #menu-btn-check:checked ~ .menu-content {
     left: 0%;
+}
+
+/******************** Top link parts ********************/
+.top-board img {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 20%;
+}
+.top-board img:hover {
+    cursor: context-menu;
+}
+.top-blog img {
+    position: absolute;
+    top: 250px;
+    left: 300px;
+    width: 20%;
+}
+.top-blog img:hover {
+    cursor: context-menu;
+}
+/******************** Top link anime ********************/
+.anime1 {
+    animation-name: turn1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+}
+@keyframes turn1 {
+    0% {
+        transform: translate(0,0px);
+    }
+    100% {
+        transform: translate(0,-15px)
+    }
+}
+.anime2 {
+    animation-name: turn2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+}
+@keyframes turn2 {
+    100% {
+        transform: translate(0,0px);
+    }
+    0% {
+        transform: translate(0,-15px)
+    }
+}
+/******************** Posts Parts  ********************/
+.posts-flex {
+    display: flex;
+    display:-webkit-flex;
+    width: 100%;
+    height: auto;
+}
+.common-body .posts-flex .flex-item {
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    margin: 5px;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 120px;
+    position: relative;
+}
+.common-body .posts-flex a{
+    font-size: 15px;
+    font-family: 'Courier', sans-serif;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+}
+/******************** show.php Post Body  ********************/
+.post-body p {
+    font-size: 17px;
+    font-family: 'Courier', sans-serif;
+    line-height: 1.6;
+}
+/******************** Blogs Parts  ********************/
+.common-body .blogs-body a{
+    font-size: 15px;
+    font-family: 'Courier', sans-serif;
+    text-decoration: none;
+}
+.blogs-flex {
+    display: flex;
+    display:-webkit-flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.common-body .blogs-flex .blogs-item {
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    margin: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
 }
