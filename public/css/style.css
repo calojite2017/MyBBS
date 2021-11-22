@@ -242,7 +242,6 @@
     flex-wrap: wrap;
     width: 30%;
     height: 120px;
-    text-align: center;
     position: relative;
 }
 .common-body .posts-flex a{
@@ -264,4 +263,20 @@
     font-size: 15px;
     font-family: 'Courier', sans-serif;
     text-decoration: none;
+}
+.blogs-flex {
+    display: flex;
+    display:-webkit-flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.common-body .blogs-flex .blogs-item {
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    margin: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
 }
