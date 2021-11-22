@@ -4,17 +4,23 @@
 
 @section('content')
 <article>
-    <h1>掲示板</h1>
-    <ul>
-        @forelse ($posts as $index => $post)
-            <li>
-                <a href="{{ route('posts.show', $index) }}">
-                  {{ $post }}
-                </a>
-            </li>
-        @empty
-            <li>No posts yet!</li>
-        @endforelse
-    </ul>
+    <div class="board-contents">
+        <div class="common-title">
+            <h1>On Board</h1>
+        </div>
+        <div class="common-body">
+            <ul>
+                @forelse ($posts as $index => $post)
+                    <li>
+                        <a href="{{ route('posts.show', $index) }}">
+                        {{ $post }}
+                        </a>
+                    </li>
+                @empty
+                    <li>No posts yet!</li>
+                @endforelse
+            </ul>
+        </div>
+    </div>
 </article>
 @endsection

@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     private $posts = [
-        '2021.10.3投稿',
-        '2021.10.4投稿',
-        '2021.10.5投稿',
+        '2021.10.3 post',
+        '2021.10.4 post',
+        '2021.10.5 post',
     ];
 
     public function index()

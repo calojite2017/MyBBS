@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
     {{-- フォント指定 --}}
     <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
     {{-- CSS読み込み --}}
     <link rel="stylesheet" type="text/css" media="screen and (min-width:961px),print" href="{{ asset('css/style_pc.css') }}">
     <link rel="stylesheet" type="text/css" media="screen and (max-width:960px)" href="{{ asset('css/style_sp.css') }}">

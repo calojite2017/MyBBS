@@ -4,7 +4,8 @@
 
 @section('content')
 <article>
-    <h1>My Blog - TOP</h1>
-
+    <div class="top-title">
+        <h1>My Blog</h1>
+    </div>
 </article>
 @endsection

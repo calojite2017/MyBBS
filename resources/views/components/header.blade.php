@@ -11,7 +11,7 @@
                         <a href="{{ route('index') }}">TOP</a>
                     </li>
                     <li>
-                        <a href="{{ route('posts.index') }}">掲示板</a>
+                        <a href="{{ route('posts.index') }}">On Board</a>
                     </li>
                 </ul>
             </div>

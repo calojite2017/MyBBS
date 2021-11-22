@@ -1,24 +1,48 @@
+/******************** header ********************/
 #Hd {
     height: 100px;
+    font-family: 'Amatic SC', cursive;
 }
 
-h1 {
+/******************** Common ********************/
+.common-title h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+}
+.common-body li {
+    font-family: 'Courier', sans-serif;
+    font-size: 25px;
+    list-style: none;
+}
+.common-body li a {
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+}
+.common-body li a:hover{
+    color: rgba(94, 94, 8, 0.466);
+}
+
+.common-back-link a {
+    font-family: 'Courier', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+
+}
+.common-back-link a:hover {
+    color: rgba(94, 94, 8, 0.466);
+}
+
+/******************** Top page ********************/
+.top-title h1 {
     border-bottom: 1px solid;
-    font-size: 18px;
+    font-size: 50px;
     margin: 16px 0;
     padding-bottom: 8px;
+    font-family: 'Courier', sans-serif;
 }
 
-li {
-    line-height: 1.6;
-    margin-bottom: 8px;
-}
-
-.back-link {
-    font-size: 14px;
-}
-
-/* ハンバーガーメニュー */
+/******************** Global hamburger menu ********************/
 .menu-btn {
     /* ここ注意↓ */
     position: fixed;
@@ -97,11 +121,13 @@ li {
 .menu-content ul li {
     border-bottom: solid 1px grey;
     list-style: none;
+    line-height: 1.6;
+    margin-bottom: 8px;
 }
 .menu-content ul li a {
     display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: 30px;
     box-sizing: border-box;
     color:grey;
     text-decoration: none;
@@ -123,3 +149,5 @@ li {
 #menu-btn-check:checked ~ .menu-content {
     left: 0%;
 }
+
+/******************** Post ********************/
