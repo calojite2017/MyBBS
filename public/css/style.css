@@ -17,9 +17,13 @@
     border-bottom: 1px solid grey;
     padding-left: 10px;
 }
-.common-body li {
+
+.common-body {
     font-family: 'Courier', sans-serif;
     font-size: 25px;
+}
+
+.common-body li {
     list-style: none;
 }
 .common-body li a {

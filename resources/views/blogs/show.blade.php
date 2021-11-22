@@ -6,9 +6,10 @@
 <article>
     <div class="blogs contents">
         <div class="common-title">
-            <h1>{{ $blog }}</h1>
+            <h1>{{ $blog->title }}</h1>
         <div>
         <div class="common-body">
+            <p>{{ $blog->body }}
 
         </div>
         <div class="common-back-link">

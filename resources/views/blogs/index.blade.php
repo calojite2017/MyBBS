@@ -10,10 +10,10 @@
         </div>
         <div class="common-body">
             <div class="blogs-body">
-                    @forelse ($blogs as $index => $blog)
+                    @forelse ($blogs as $blog)
                                 <div class="blogs-item">
-                                <a href="{{ route('blogs.show', $index) }}"><p>
-                                {{ $blog }}</p>
+                                <a href="{{ route('blogs.show', $blog) }}"><p>
+                                {{ $blog->title }}</p>
                                 </a>
                             </div>
                     @empty
