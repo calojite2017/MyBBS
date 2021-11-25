@@ -22,7 +22,12 @@ Route::get('/', [TopPageServer::class, 'index'])
 
 // 掲示板
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
-Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('posts/{post}', [PostController::class, 'show'])
+    ->name('posts.show')
+    ->where('post', '[0-9]+');
+Route::get('posts/create', [PostController::class, 'create'])->name('posts.create');
+
+
 
 // ブログ
 Route::get('blogs', [BlogController::class, 'index'])->name('blogs.index');

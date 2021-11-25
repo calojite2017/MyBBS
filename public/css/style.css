@@ -16,6 +16,16 @@
     font-size: 40px;
     border-bottom: 1px solid grey;
     padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.common-title h1 > a {
+    font-size: 25px;
+    font-weight: normal;
+    margin-left: auto;
+    /* padding-top: 3%;
+    padding-right: 3%; */
 }
 
 .common-body {
@@ -280,3 +290,26 @@
     width: 100%;
     height: auto;
 }
+/******************** form  ********************/
+.board-form input,
+.board-form textarea {
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.board-form textarea {
+    height: 160px;
+}
+.board-form button {
+    padding: 4px 8px;
+    font-size: 14px;
+}
+.form-group {
+    margin-bottom: 16px;
+    font-family: 'Courier', sans-serif;
+}
+.form-button {
+    text-align: right;
+    font-family: 'Courier', sans-serif;
+}
+
