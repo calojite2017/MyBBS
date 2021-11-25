@@ -6,7 +6,10 @@
 <article>
     <div class="board contents">
         <div class="common-title">
-            <h1>Boards</h1>
+            <h1>
+                <span>Boards</span>
+                <a href="{{ route('posts.create') }}">[Add]</a>
+            </h1>
         </div>
         <div class="common-body">
             <div class="posts-flex">

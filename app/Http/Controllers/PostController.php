@@ -20,11 +20,16 @@ class PostController extends Controller
     // 引数内の処理：$postにPostクラスmodel(postテーブル)のidやレコードを格納 -(1)
     // ルーティングのURL名に{post}を使うこと
     public function show(Post $post)
-     {
+    {
         // 該当idのみのデータを変数に格納（idがない場合は404エラーページを返す）
         // $post = Post::findOrFail($id); (1)の処理をしたので不要
 
         return view('posts.show')
             ->with(['post' => $post]);
+    }
+
+    public function create()
+    {
+        return view('posts.create');
     }
 }
