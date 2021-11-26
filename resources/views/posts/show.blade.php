@@ -8,7 +8,7 @@
         <div class="common-title">
             <h1>
                 <span>{{ $post->title }}</span>
-                <a href="#">[Edit]</a>
+                <a href="{{ route('posts.edit', $post) }}">[Edit]</a>
             </h1>
         <div>
         <div class="post-body">
