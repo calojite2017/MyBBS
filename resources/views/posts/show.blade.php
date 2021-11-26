@@ -6,10 +6,14 @@
 <article>
     <div class="posts contents">
         <div class="common-title">
-            <h1>{{ $post->title }}</h1>
+            <h1>
+                <span>{{ $post->title }}</span>
+                <a href="#">[Edit]</a>
+            </h1>
         <div>
         <div class="post-body">
-            <p>{{ $post->body }}</p>
+            {{-- htmlタグをe()で文字実態参照化->nl2br()で改行をbrタグ化->{!!でタグや文字実体参照が反映されるように --}}
+            <p>{!! nl2br(e($post->body)) !!}</p>
         </div>
         <div class="common-back-link">
             &laquo; <a href="{{ route('posts.index') }}">もどる</a>
