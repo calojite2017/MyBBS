@@ -17,12 +17,10 @@
                 </form>
             </h1>
         <div>
+        <p>投稿日：{{ $post->created_at }}</p>
         <div class="post-body">
             {{-- htmlタグをe()で文字実態参照化->nl2br()で改行をbrタグ化->{!!でタグや文字実体参照が反映されるように --}}
             <p>{!! nl2br(e($post->body)) !!}</p>
-        </div>
-        <div class="common-back-link">
-            &laquo; <a href="{{ route('posts.index') }}">もどる</a>
         </div>
     </div>
     {{-- コメント欄 --}}
@@ -43,6 +41,7 @@
             @foreach ($post->comments()->latest()->get() as $comment)
                 <li>
                     {{ $comment->body }}
+                    <span>@ {{ $post->created_at }} </span>
                     <form method="post" action="{{ route('comments.destroy', $comment) }}" class="delete-comments">
                         @method('DELETE')
                         @csrf
@@ -51,6 +50,10 @@
                 </li>
             @endforeach
         </ul>
+    </div>
+    {{-- 戻るボタン --}}
+    <div class="common-back-link">
+        &laquo; <a href="{{ route('posts.index') }}">もどる</a>
     </div>
     {{-- スクリプトタグ・削除アラート作成 --}}
     <script>

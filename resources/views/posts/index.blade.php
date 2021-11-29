@@ -14,11 +14,12 @@
         <div class="common-body">
             <div class="posts-flex">
                     @forelse ($posts as $post)
-                                <div class="flex-item">
-                                <a href="{{ route('posts.show', $post) }}"><p>
-                                {{ $post->title }}</p>
-                                </a>
-                            </div>
+                        <div class="flex-item">
+                            <a href="{{ route('posts.show', $post) }}">
+                                <p>{{ $post->created_at }}</p>
+                                <h3>*{{ $post->title }}</h3>
+                            </a>
+                        </div>
                     @empty
                         <li>No posts yet!</li>
                     @endforelse
