@@ -9,7 +9,10 @@
             <h1>
                 <span>{{ $post->title }}</span>
                 <a href="{{ route('posts.edit', $post) }}">[Edit]</a>
-                <form method="post" action="">
+                <form method="post" action="{{ route('posts.destroy', $post) }}" id="delete_post">
+                    @method('DELETE')
+                    @csrf
+
                     <button class="delete-btn">[x]</button>
                 </form>
             </h1>
@@ -22,5 +25,22 @@
             &laquo; <a href="{{ route('posts.index') }}">もどる</a>
         </div>
     </div>
+
+    {{-- スクリプトタグ・削除アラート作成 --}}
+    <script>
+        'use strict';
+
+        {
+            document.getElementById('delete_post').addEventListener('submit', e =>{
+                e.preventDefault();
+
+                if (!confirm('本当に削除しますか?')) {
+                    return;
+                }
+
+                e.target.submit();
+            })
+        }
+    </script>
 </article>
 @endsection
