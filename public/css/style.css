@@ -45,7 +45,7 @@ a {
     color: rgba(94, 94, 8, 0.466);
 }
 .common-back-link {
-    /* margin: 20px; */
+    margin: 20px;
     text-align: right;
 }
 .common-back-link a {
@@ -342,11 +342,17 @@ font-family: 'Courier', sans-serif;
 .comments-form {
     display: flex;
 }
-.post-comments .error{
-    color: red;
+.comments-form :nth-child(3){
+    margin-left: 20px;
+}
+.comments-form :nth-child(4){
+    margin-left: 20px;
 }
 .comments-form > button {
     margin-left: 8px;
+}
+.post-comments .error{
+    color: red;
 }
 .post-comments {
     font-family: 'Courier', sans-serif;
