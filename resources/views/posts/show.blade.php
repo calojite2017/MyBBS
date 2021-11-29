@@ -7,13 +7,13 @@
     <div class="posts contents">
         <div class="common-title">
             <h1>
-                <span>{{ $post->title }}</span>
+                <span>Title* {{ $post->title }}</span>
                 <a href="{{ route('posts.edit', $post) }}">[Edit]</a>
                 <form method="post" action="{{ route('posts.destroy', $post) }}" id="delete_post">
                     @method('DELETE')
                     @csrf
 
-                    <button class="delete-btn">[x]</button>
+                    <button class="delete-btn">[×]</button>
                 </form>
             </h1>
         <div>
