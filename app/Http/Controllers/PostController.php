@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
@@ -16,8 +17,7 @@ class PostController extends Controller
             ->with(['posts' => $posts]);
     }
 
-    // Implicit Binding
-    // 引数内の処理：$postにPostクラスmodel(postテーブル)のidやレコードを格納 -(1)
+    // Implicit Binding（引数内の自動処理：$postにPostクラスmodel(postテーブル)のidやレコードを格納 -(1)）
     // ルーティングのURL名に{post}を使うこと
     public function show(Post $post)
     {
@@ -33,17 +33,9 @@ class PostController extends Controller
         return view('posts.create');
     }
 
-    public function store(Request $request)
+    // $requestをPostRequest型に変更。PostRequestのバリデーションを自動に行ってくれる。
+    public function store(PostRequest $request)
     {
-        // リクエストをvalidate。入力必須と最小文字数3文字
-        $request->validate([
-            'title' => 'required|min:3',
-            'body' => 'required',
-        ],[
-            'title.required' => 'タイトルは必須です。',
-            'title.min' => ':min 文字以上入力してください。',
-            'body.required' => '本文は必須です。',
-        ]);
         // ポストインスタンスを作る（コントローラではインスタンスが勝手にnewされない!?）
         $post = new Post();
         $post->title = $request->title;
@@ -60,17 +52,9 @@ class PostController extends Controller
             ->with(['post' => $post]);
     }
 
-    public function update(Request $request, Post $post)
+    // $requestをPostRequest型に変更。PostRequestのバリデーションを自動に行ってくれる。
+    public function update(PostRequest $request, Post $post)
     {
-        $request->validate([
-            'title' => 'required|min:3',
-            'body' => 'required',
-        ],[
-            'title.required' => 'タイトルは必須です。',
-            'title.min' => ':min 文字以上入力してください。',
-            'body.required' => '本文は必須です。',
-        ]);
-
         $post->title = $request->title;
         $post->body = $request->body;
         $post->save();

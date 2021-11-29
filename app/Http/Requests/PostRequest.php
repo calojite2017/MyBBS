@@ -13,7 +13,8 @@ class PostRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        // return false;
+        return true;
     }
 
     /**
@@ -24,7 +25,18 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            // コントローラのバリデーションルールを移動
+            'title' => 'required|min:3',
+            'body' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'タイトルは必須です。',
+            'title.min' => ':min 文字以上入力してください。',
+            'body.required' => '本文は必須です。',
         ];
     }
 }
