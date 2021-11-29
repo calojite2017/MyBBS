@@ -45,8 +45,8 @@ a {
     color: rgba(94, 94, 8, 0.466);
 }
 .common-back-link {
-    margin: 50px 0 70px 50px;
-    /* margin-left: 30px; */
+    /* margin: 20px; */
+    text-align: right;
 }
 .common-back-link a {
     font-family: 'Courier', sans-serif;

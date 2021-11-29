@@ -23,6 +23,15 @@
                 </div>
                 <div class="form-group">
                     <label>
+                        Name
+                        <input type="text" name="name" value="{{ old('name') }}">
+                    </label>
+                    @error('title')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label>
                         Body
                         <textarea name="body">{{ old('body') }}</textarea>
                     </label>
