@@ -339,4 +339,7 @@ font-family: 'Courier', sans-serif;
     font-size: 18px;
     margin-top: 40px;
 }
+.post-comments li {
+    margin: 10px 0;
+}
 
