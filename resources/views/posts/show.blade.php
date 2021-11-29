@@ -35,10 +35,19 @@
                     <input type="text" name="body">
                     <button>Add</button>
                 </form>
+                @error('body')
+                <div class="error">{{ $message }}</div>
+                @enderror
             </li>
+            {{-- コメント削除 --}}
             @foreach ($post->comments()->latest()->get() as $comment)
                 <li>
                     {{ $comment->body }}
+                    <form method="post" action="{{ route('comments.destroy', $comment) }}" class="delete-comments">
+                        @method('DELETE')
+                        @csrf
+                        <button>[×]</button>
+                    </form>
                 </li>
             @endforeach
         </ul>
@@ -56,7 +65,20 @@
                 }
 
                 e.target.submit();
-            })
+            });
+
+            // querySelectorAll()で全ての要素を取得
+            document.querySelectorAll('.delete-comments').forEach(form => {
+                form.addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    if(!confirm('本当に削除しますか？')) {
+                        return;
+                    }
+
+                    form.submit();
+                });
+            });
         }
     </script>
 </article>

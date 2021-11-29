@@ -329,6 +329,9 @@ font-family: 'Courier', sans-serif;
 .comments-form {
     display: flex;
 }
+.post-comments .error{
+    color: red;
+}
 .comments-form > button {
     margin-left: 8px;
 }
@@ -340,6 +343,15 @@ font-family: 'Courier', sans-serif;
     margin-top: 40px;
 }
 .post-comments li {
-    margin: 10px 0;
+    margin: 15px 0;
+}
+.delete-comments {
+    display: inline-block;
+}
+.delete-comments button {
+    border: none;
+    background-color: transparent;
+    vertical-align: 3px;
+    cursor: pointer;
 }
 
