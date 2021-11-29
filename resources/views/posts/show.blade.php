@@ -9,6 +9,9 @@
             <h1>
                 <span>{{ $post->title }}</span>
                 <a href="{{ route('posts.edit', $post) }}">[Edit]</a>
+                <form method="post" action="">
+                    <button class="delete-btn">[x]</button>
+                </form>
             </h1>
         <div>
         <div class="post-body">
