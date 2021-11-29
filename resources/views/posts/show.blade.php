@@ -25,7 +25,24 @@
             &laquo; <a href="{{ route('posts.index') }}">もどる</a>
         </div>
     </div>
-
+    {{-- コメント欄 --}}
+    <div class="post-comments">
+        <h2>Comments</h2>
+        <ul>
+            <li>
+                <form method="post" action="{{ route('comments.store', $post) }}" class="comments-form">
+                    @csrf
+                    <input type="text" name="body">
+                    <button>Add</button>
+                </form>
+            </li>
+            @foreach ($post->comments as $comment)
+                <li>
+                    {{ $comment->body }}
+                </li>
+            @endforeach
+        </ul>
+    </div>
     {{-- スクリプトタグ・削除アラート作成 --}}
     <script>
         'use strict';

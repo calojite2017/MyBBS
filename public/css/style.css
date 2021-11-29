@@ -325,5 +325,18 @@ font-family: 'Courier', sans-serif;
     vertical-align: 6px;
     font-family: 'Amatic SC', cursive;
 }
-
+/******************** comment欄 ********************/
+.comments-form {
+    display: flex;
+}
+.comments-form > button {
+    margin-left: 8px;
+}
+.post-comments {
+    font-family: 'Courier', sans-serif;
+}
+.post-comments h2 {
+    font-size: 18px;
+    margin-top: 40px;
+}
 
