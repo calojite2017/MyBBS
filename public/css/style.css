@@ -4,12 +4,13 @@
     font-family: 'Amatic SC', cursive;
     z-index: 0;
 }
-
 /******************** Common ********************/
+a {
+    text-decoration: none;
+}
 .contents {
     margin: 10px 40px;
 }
-
 .common-title h1 {
     color: grey;
     font-family: 'Amatic SC', cursive;
@@ -19,7 +20,6 @@
     display: flex;
     align-items: center;
 }
-
 .common-title h1 > a {
     font-size: 25px;
     font-weight: normal;
@@ -27,12 +27,10 @@
     /* padding-top: 3%;
     padding-right: 3%; */
 }
-
 .common-body {
     font-family: 'Courier', sans-serif;
     font-size: 25px;
 }
-
 .common-body li {
     list-style: none;
 }
@@ -43,7 +41,6 @@
 .common-body li a:hover{
     color: rgba(94, 94, 8, 0.466);
 }
-
 .common-back-link a {
     font-family: 'Courier', sans-serif;
     font-size: 25px;
@@ -68,16 +65,13 @@
     font-family: 'Courier', sans-serif;
     /* font-family: 'Amatic SC', cursive; */
 }
-
 .top-title a {
     text-decoration: none;
     color: rgb(63, 62, 62);
 }
-
 .top-title a:hover {
     color: rgba(94, 94, 8, 0.466);
 }
-
 /******************** Global hamburger menu ********************/
 .menu-btn {
     /* ここ注意↓ */
@@ -106,7 +100,6 @@
     /* ここ注意↓ */
     transition: all 0.5s ease;
 }
-
 .menu-btn span:before,
 .menu-btn span:after {
     content: '';
@@ -244,13 +237,15 @@
     display:-webkit-flex;
     width: 100%;
     height: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .common-body .posts-flex .flex-item {
     background-color: rgb(197, 197, 197);
     border-radius: 10px;
     margin: 5px;
-    flex-wrap: wrap;
-    width: 30%;
+    /* flex-wrap: wrap; */
+    width: 120px;
     height: 120px;
     position: relative;
 }
@@ -291,6 +286,9 @@
     height: auto;
 }
 /******************** form  ********************/
+.board-form {
+font-family: 'Courier', sans-serif;
+}
 .board-form input,
 .board-form textarea {
     padding: 4px;
@@ -306,10 +304,54 @@
 }
 .form-group {
     margin-bottom: 16px;
-    font-family: 'Courier', sans-serif;
 }
 .form-button {
     text-align: right;
+}
+/******************** error message ********************/
+.board-form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+}
+/******************** delete button ********************/
+.delete-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: normal;
+    color: grey;
+    cursor: pointer;
+    vertical-align: 6px;
+    font-family: 'Amatic SC', cursive;
+}
+/******************** comment欄 ********************/
+.comments-form {
+    display: flex;
+}
+.post-comments .error{
+    color: red;
+}
+.comments-form > button {
+    margin-left: 8px;
+}
+.post-comments {
     font-family: 'Courier', sans-serif;
+}
+.post-comments h2 {
+    font-size: 18px;
+    margin-top: 40px;
+}
+.post-comments li {
+    margin: 15px 0;
+}
+.delete-comments {
+    display: inline-block;
+}
+.delete-comments button {
+    border: none;
+    background-color: transparent;
+    vertical-align: 3px;
+    cursor: pointer;
 }
 
