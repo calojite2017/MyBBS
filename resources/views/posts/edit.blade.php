@@ -13,13 +13,22 @@
             <form method="post" action="{{ route('posts.update', $post) }}">
                 @method('PATCH')
                 @csrf
-                
+
                 <div class="form-group">
                     <label>
                         Title
                         <input type="text" name="title" value="{{ old('title', $post->title) }}">
                     </label>
                     @error('title')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label>
+                        Name
+                        <input type="text" name="name" value="{{ old('name', $post->name) }}">
+                    </label>
+                    @error('name')
                         <div class="error">{{ $message }}</div>
                     @enderror
                 </div>

@@ -26,7 +26,7 @@
                         Name
                         <input type="text" name="name" value="{{ old('name') }}">
                     </label>
-                    @error('title')
+                    @error('name')
                         <div class="error">{{ $message }}</div>
                     @enderror
                 </div>

@@ -17,14 +17,14 @@
                 </form>
             </h1>
         <div>
-        {{-- 戻るボタン --}}
-        <div class="common-back-link">
-            &laquo; <a href="{{ route('posts.index') }}">もどる</a>
-        </div>
         <p>投稿日：{{ $post->created_at }}</p>
         <div class="post-body">
             {{-- htmlタグをe()で文字実態参照化->nl2br()で改行をbrタグ化->{!!でタグや文字実体参照が反映されるように --}}
             <p>{!! nl2br(e($post->body)) !!}</p>
+        </div>
+        {{-- 戻るボタン --}}
+        <div class="common-back-link">
+            &laquo; <a href="{{ route('posts.index') }}">もどる</a>
         </div>
     </div>
     {{-- コメント欄 --}}
