@@ -4,9 +4,9 @@
     </div>
     <div class="company-info">
         <ul>
-            <li>所在地</li>
-            <li>プライバシーポリシー</li>
-            <li>会社概要</li>
+            <li>所在地：</li>
+            <a href=""><li>プライバシーポリシー</li></a>
+            <a href=""><li>会社概要</li></a>
         </ul>
     </div>
 </footer>
