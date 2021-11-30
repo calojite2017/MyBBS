@@ -7,3 +7,5 @@
 
 ### 
 port: http://localhost:8000/
+
+phpMyadmin: http://localhost:8080/
