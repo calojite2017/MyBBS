@@ -87,8 +87,8 @@ a {
     right: 10px;
     top: 15px;
     display: flex;
-    height: 60px;
-    width: 60px;
+    height: 100px;
+    width: 100px;
     justify-content: center;
     align-items: center;
     z-index: 90;
@@ -98,9 +98,9 @@ a {
 .menu-btn span {
     content: '';
     display: block;
-    height: 3px;
+    height: 6px;
     /* ここ注意↓ */
-    width: 16px;
+    width: 30px;
     border-radius: 3px;
     background-color: grey;
     position: absolute;
@@ -111,9 +111,9 @@ a {
 .menu-btn span:after {
     content: '';
     display: block;
-    height: 3px;
+    height: 6px;
     /* ここ注意↓ */
-    width: 20px;
+    width: 35px;
     border-radius: 3px;
     background-color: grey;
     position: absolute;
@@ -121,10 +121,10 @@ a {
     transition: all 0.5s ease;
 }
 .menu-btn span:before {
-    bottom: 8px;
+    bottom: 12px;
 }
 .menu-btn span:after {
-    top: 8px;
+    top: 12px;
 }
 #menu-btn-check:checked ~ .menu-btn span {
     background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
@@ -372,5 +372,26 @@ font-family: 'Courier', sans-serif;
     background-color: transparent;
     vertical-align: 3px;
     cursor: pointer;
+}
+/******************** footer ********************/
+article {
+    position: relative;
+}
+footer {
+    border-top: 1px solid grey;
+    position: absolute;
+    top: 700px;
+    height: 200px;
+    text-align: center;
+    width: 100%;
+}
+#Ft img {
+    padding-top: 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+.company-info li {
+    color: rgb(63, 62, 62);
+    text-align: left;
 }
 
