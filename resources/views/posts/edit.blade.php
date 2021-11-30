@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
-@section('title','Edit Board')
+@section('title','Edit BBS')
 
 @section('content')
 <article>
     <div class="board contents">
         <div class="common-title">
-            <h1>Edit Board</h1>
+            <h1>Edit BBS</h1>
         </div>
 
         <div class="board-form">

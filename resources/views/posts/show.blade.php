@@ -7,7 +7,7 @@
     <div class="posts contents">
         <div class="common-title">
             <h1>
-                <span>Boards * {{ $post->title }}</span>
+                <span>投稿 * {{ $post->title }}</span>
                 <a href="{{ route('posts.edit', $post) }}">[Edit]</a>
                 <form method="post" action="{{ route('posts.destroy', $post) }}" id="delete_post">
                     @method('DELETE')

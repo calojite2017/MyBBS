@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" media="screen,print" href="{{ asset('css/style.css') }}">
     {{-- タイトル --}}
     @hasSection ('title')
-    <title>@yield('title') | My Blog</title>
+    <title>@yield('title') | My BBS</title>
     @else
-    <title>My Blog</title>
+    <title>My BBS</title>
     @endif
 </head>
 

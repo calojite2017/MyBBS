@@ -6,7 +6,7 @@
 <article>
     <div class="board contents">
         <div class="common-title">
-            <h1>Add Board!</h1>
+            <h1>Add BBS</h1>
         </div>
 
         <div class="board-form">

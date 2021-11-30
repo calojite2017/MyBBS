@@ -2,7 +2,7 @@
     <div id="Hd">
         {{-- タイトル --}}
         <div class="top-title">
-            <h1><a href="{{ route('index') }}">My Blog</a></h1>
+            <h1><a href="{{ route('index') }}">My BBS</a></h1>
         </div>
         {{-- ハンバーガーメニュー --}}
         <div class="hamburger-menu">
@@ -15,7 +15,7 @@
                         <a href="{{ route('index') }}">TOP</a>
                     </li>
                     <li>
-                        <a href="{{ route('posts.index') }}">Boards</a>
+                        <a href="{{ route('posts.index') }}">BBS</a>
                     </li>
                     <li>
                         <a href="{{ route('blogs.index') }}">Blogs</a>
