@@ -18,7 +18,13 @@
                         <a href="{{ route('posts.index') }}">BBS</a>
                     </li>
                     <li>
-                        <a href="{{ route('blogs.index') }}">Blogs</a>
+                        <a href="{{ route('blogs.index') }}">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
                     </li>
                 </ul>
             </div>
