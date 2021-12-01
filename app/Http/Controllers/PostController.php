@@ -39,6 +39,7 @@ class PostController extends Controller
         // ポストインスタンスを作る（コントローラではインスタンスが勝手にnewされない!?）
         $post = new Post();
         $post->title = $request->title;
+        $post->name = $request->name;
         $post->body = $request->body;
         $post->save();
         // 処理後にリダイレクト
@@ -56,6 +57,7 @@ class PostController extends Controller
     public function update(PostRequest $request, Post $post)
     {
         $post->title = $request->title;
+        $post->name = $request->name;
         $post->body = $request->body;
         $post->save();
         return redirect()

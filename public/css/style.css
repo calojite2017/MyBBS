@@ -5,23 +5,30 @@
     z-index: 0;
 }
 /******************** Common ********************/
+body {
+    background-color: blanchedalmond;
+    margin: 0 auto;
+}
 a {
     text-decoration: none;
 }
 .contents {
     margin: 10px 40px;
 }
+.common-title {
+    margin-top: 50px;
+}
 .common-title h1 {
     color: grey;
-    font-family: 'Amatic SC', cursive;
-    font-size: 40px;
+    font-family: 'Courier', sans-serif;
+    font-size: 27px;
     border-bottom: 1px solid grey;
     padding-left: 10px;
     display: flex;
     align-items: center;
 }
 .common-title h1 > a {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: normal;
     margin-left: auto;
     /* padding-top: 3%;
@@ -40,6 +47,10 @@ a {
 }
 .common-body li a:hover{
     color: rgba(94, 94, 8, 0.466);
+}
+.common-back-link {
+    margin: 20px;
+    text-align: right;
 }
 .common-back-link a {
     font-family: 'Courier', sans-serif;
@@ -77,13 +88,13 @@ a {
     /* ここ注意↓ */
     position: fixed;
     /* ここ注意↓ */
-    right: 10px;
-    top: 15px;
+    right: 0;
+    top: 59px;
     display: flex;
-    height: 60px;
-    width: 60px;
-    justify-content: center;
-    align-items: center;
+    height: 100px;
+    width: 100px;
+    /* justify-content: center; */
+    /* align-items: center; */
     z-index: 90;
     /* ここ注意↓ */
     background-color: transparent;
@@ -91,9 +102,9 @@ a {
 .menu-btn span {
     content: '';
     display: block;
-    height: 3px;
+    height: 6px;
     /* ここ注意↓ */
-    width: 16px;
+    width: 30px;
     border-radius: 3px;
     background-color: grey;
     position: absolute;
@@ -104,9 +115,9 @@ a {
 .menu-btn span:after {
     content: '';
     display: block;
-    height: 3px;
+    height: 6px;
     /* ここ注意↓ */
-    width: 20px;
+    width: 35px;
     border-radius: 3px;
     background-color: grey;
     position: absolute;
@@ -114,10 +125,10 @@ a {
     transition: all 0.5s ease;
 }
 .menu-btn span:before {
-    bottom: 8px;
+    bottom: 12px;
 }
 .menu-btn span:after {
-    top: 8px;
+    top: 12px;
 }
 #menu-btn-check:checked ~ .menu-btn span {
     background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
@@ -181,24 +192,94 @@ a {
     left: 0%;
 }
 
+@media screen and (max-width: 860px) {
+    .menu-btn {
+        position: fixed;
+        right: 0;
+        top: 62px;
+        display: flex;
+        height: 100px;
+        width: 100px;
+        z-index: 90;
+        background-color: transparent;
+    }
+    .menu-btn span {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 28px;
+        border-radius: 3px;
+        background-color: grey;
+        position: absolute;
+        transition: all 0.5s ease;
+    }
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: grey;
+        position: absolute;
+        transition: all 0.5s ease;
+    }
+    .menu-btn span:before {
+        bottom: 10px;
+    }
+    .menu-btn span:after {
+        top: 10px;
+    }
+}
+
 /******************** Top link parts ********************/
-.top-board img {
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    width: 20%;
+.top-menu {
+    font-family: 'Amatic SC', cursive;
+    padding: 40px;
+    width: 90%;
+    margin: 0 auto;
 }
-.top-board img:hover {
-    cursor: context-menu;
+.top-board span {
+    font-size: 170px;
+    margin-left: 30px;
 }
-.top-blog img {
-    position: absolute;
-    top: 250px;
-    left: 300px;
-    width: 20%;
+.top-blog span {
+    font-size: 45px;
+    margin-left: 30%;
 }
-.top-blog img:hover {
-    cursor: context-menu;
+.top-contact span {
+    font-size: 25px;
+    margin-left: 50%;
+    margin-top: 20%;
+}
+.top-news span {
+    font-size: 65px;
+    margin-left: 80%;
+}
+/* 画面サイズ別CSS・タブレット*/
+@media screen and (max-width: 860px) {
+    .top-menu {
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .top-board span {
+        margin-left: 0px;
+        font-size: 80px;
+    }
+    .top-blog span {
+        font-size: 30px;
+        margin-left: 25%;
+    }
+    .top-contact span {
+        font-size: 15px;
+        margin-left: 45%;
+        margin-top: 20%;
+    }
+    .top-news span {
+        font-size: 60px;
+        margin-left: 70%;
+    }
 }
 /******************** Top link anime ********************/
 .anime1 {
@@ -244,24 +325,30 @@ a {
     background-color: rgb(197, 197, 197);
     border-radius: 10px;
     margin: 5px;
-    /* flex-wrap: wrap; */
-    width: 120px;
-    height: 120px;
-    position: relative;
+    padding: 10px;
+    width: 130px;
+    height: 130px;
+}
+.common-body .posts-flex .flex-item p {
+    font-size: 14px;
+    vertical-align: top;
+}
+.common-body .posts-flex .flex-item h3 {
+    font-size: 16px;
 }
 .common-body .posts-flex a{
     font-size: 15px;
     font-family: 'Courier', sans-serif;
     text-decoration: none;
-    position: absolute;
-    bottom: 0px;
-    left: 15px;
 }
 /******************** show.php Post Body  ********************/
 .post-body p {
     font-size: 17px;
     font-family: 'Courier', sans-serif;
     line-height: 1.6;
+}
+.post-body {
+    margin-bottom: 100px;
 }
 /******************** Blogs Parts  ********************/
 .common-body .blogs-body a{
@@ -322,18 +409,24 @@ font-family: 'Courier', sans-serif;
     font-weight: normal;
     color: grey;
     cursor: pointer;
-    vertical-align: 6px;
-    font-family: 'Amatic SC', cursive;
+    vertical-align: 2px;
+    font-family: 'Courier', sans-serif;
 }
 /******************** comment欄 ********************/
 .comments-form {
     display: flex;
 }
-.post-comments .error{
-    color: red;
+.comments-form :nth-child(3){
+    margin-left: 20px;
+}
+.comments-form :nth-child(4){
+    margin-left: 20px;
 }
 .comments-form > button {
     margin-left: 8px;
+}
+.post-comments .error{
+    color: red;
 }
 .post-comments {
     font-family: 'Courier', sans-serif;
@@ -353,5 +446,42 @@ font-family: 'Courier', sans-serif;
     background-color: transparent;
     vertical-align: 3px;
     cursor: pointer;
+}
+/******************** footer ********************/
+article {
+    position: relative;
+}
+footer {
+    border-top: 1px solid grey;
+    /* position: absolute; */
+    top: 700px;
+    height: 250px;
+    text-align: center;
+    width: 100%;
+}
+#Ft img {
+    padding-top: 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+.company-info {
+    font-family: 'Courier', sans-serif;
+    margin: 30px;
+}
+.company-info li {
+    color: rgb(63, 62, 62);
+    text-align: left;
+}
+/******************** news-list ********************/
+.news-list {
+    margin: 50px 0 50px 30px;
+    font-family: 'Courier', sans-serif;
+    font-size: 20px;
+    height: 80px;
+}
+.news-list h1 {
+    display: inline-block;
+    border: 1px solid grey;
+    padding: 5px 10px;
 }
 

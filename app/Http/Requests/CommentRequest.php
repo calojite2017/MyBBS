@@ -25,6 +25,7 @@ class CommentRequest extends FormRequest
     {
         return [
             'body' => 'required',
+            'name' => 'required',
         ];
     }
 
@@ -32,6 +33,7 @@ class CommentRequest extends FormRequest
     {
         return [
             'body.required' => 'コメント本文は必須です。',
+            'name.required' => 'お名前は必須です。',
         ];
     }
 }

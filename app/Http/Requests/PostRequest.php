@@ -27,6 +27,7 @@ class PostRequest extends FormRequest
         return [
             // コントローラのバリデーションルールを移動
             'title' => 'required|min:3',
+            'name' => 'required',
             'body' => 'required',
         ];
     }
@@ -35,6 +36,7 @@ class PostRequest extends FormRequest
     {
         return [
             'title.required' => 'タイトルは必須です。',
+            'title.required' => 'お名前は必須です。',
             'title.min' => ':min 文字以上入力してください。',
             'body.required' => '本文は必須です。',
         ];

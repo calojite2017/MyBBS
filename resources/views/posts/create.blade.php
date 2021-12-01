@@ -6,7 +6,7 @@
 <article>
     <div class="board contents">
         <div class="common-title">
-            <h1>Add Board!</h1>
+            <h1>Add BBS</h1>
         </div>
 
         <div class="board-form">
@@ -18,6 +18,15 @@
                         <input type="text" name="title" value="{{ old('title') }}">
                     </label>
                     @error('title')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label>
+                        Name
+                        <input type="text" name="name" value="{{ old('name') }}">
+                    </label>
+                    @error('name')
                         <div class="error">{{ $message }}</div>
                     @enderror
                 </div>
