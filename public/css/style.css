@@ -7,6 +7,7 @@
 /******************** Common ********************/
 body {
     background-color: blanchedalmond;
+    margin: 0 auto;
 }
 a {
     text-decoration: none;
@@ -87,13 +88,13 @@ a {
     /* ここ注意↓ */
     position: fixed;
     /* ここ注意↓ */
-    right: 10px;
-    top: 15px;
+    right: 0;
+    top: 59px;
     display: flex;
     height: 100px;
     width: 100px;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     z-index: 90;
     /* ここ注意↓ */
     background-color: transparent;
@@ -189,6 +190,46 @@ a {
 
 #menu-btn-check:checked ~ .menu-content {
     left: 0%;
+}
+
+@media screen and (max-width: 860px) {
+    .menu-btn {
+        position: fixed;
+        right: 0;
+        top: 62px;
+        display: flex;
+        height: 100px;
+        width: 100px;
+        z-index: 90;
+        background-color: transparent;
+    }
+    .menu-btn span {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 28px;
+        border-radius: 3px;
+        background-color: grey;
+        position: absolute;
+        transition: all 0.5s ease;
+    }
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: grey;
+        position: absolute;
+        transition: all 0.5s ease;
+    }
+    .menu-btn span:before {
+        bottom: 10px;
+    }
+    .menu-btn span:after {
+        top: 10px;
+    }
 }
 
 /******************** Top link parts ********************/
