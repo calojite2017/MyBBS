@@ -5,6 +5,7 @@ use App\Http\Controllers\TopPageServer;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
+use App\Models\Company;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,8 +45,16 @@ Route::delete('comments/{comment}/destroy', [CommentController::class, 'destroy'
     ->name('comments.destroy')
     ->where('comment', '[0-9]+');
 
-
-
 // ブログ
 Route::get('blogs', [BlogController::class, 'index'])->name('blogs.index');
 Route::get('blogs/{blog}', [BlogController::class, 'show'])->name('blogs.show');
+
+// 共通変数
+View::composer('*', function($view)
+{
+  $c_address = Company::where('id', 1)->first();
+  $view->with('c_address', $c_address);
+
+  $c_post = Company::where('id', 2)->first();
+  $view->with('c_post', $c_post);
+});

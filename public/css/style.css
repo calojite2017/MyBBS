@@ -233,44 +233,53 @@ a {
 }
 
 /******************** Top link parts ********************/
-/* .top-board img {
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    width: 20%;
-}
-.top-board img:hover {
-    cursor: context-menu;
-}
-.top-blog img {
-    position: absolute;
-    top: 250px;
-    left: 300px;
-    width: 20%;
-}
-.top-blog img:hover {
-    cursor: context-menu;
-} */
 .top-menu {
+    font-family: 'Amatic SC', cursive;
     padding: 40px;
     width: 90%;
     margin: 0 auto;
 }
 .top-board span {
-    font-size: 130px;
+    font-size: 170px;
+    margin-left: 30px;
 }
 .top-blog span {
-    font-size: 40px;
-    margin: 25%;
+    font-size: 45px;
+    margin-left: 30%;
 }
 .top-contact span {
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 50%;
     margin-top: 20%;
 }
 .top-news span {
-    font-size: 60px;
-    margin: 70%;
+    font-size: 65px;
+    margin-left: 80%;
+}
+/* 画面サイズ別CSS・タブレット*/
+@media screen and (max-width: 860px) {
+    .top-menu {
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .top-board span {
+        margin-left: 0px;
+        font-size: 80px;
+    }
+    .top-blog span {
+        font-size: 30px;
+        margin-left: 25%;
+    }
+    .top-contact span {
+        font-size: 15px;
+        margin-left: 45%;
+        margin-top: 20%;
+    }
+    .top-news span {
+        font-size: 60px;
+        margin-left: 70%;
+    }
 }
 /******************** Top link anime ********************/
 .anime1 {
@@ -455,31 +464,11 @@ footer {
     width: 30%;
     margin: 0 auto;
 }
+.company-info {
+    font-family: 'Courier', sans-serif;
+}
 .company-info li {
     color: rgb(63, 62, 62);
     text-align: left;
 }
-/* 画面サイズ別CSS・タブレット*/
-@media screen and (max-width: 860px) {
-    .top-menu {
-        padding: 20px;
-        width: 80%;
-        margin: 0 auto;
-    }
-    .top-board span {
-        font-size: 500%;
-    }
-    .top-blog span {
-        font-size: 150%;
-        margin: 25%;
-    }
-    .top-contact span {
-        font-size: 75%;
-        margin-left: 35%;
-        margin-top: 20%;
-    }
-    .top-news span {
-        font-size: 300%;
-        margin: 50%;
-    }
-}
+
