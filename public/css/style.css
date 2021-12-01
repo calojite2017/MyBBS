@@ -5,6 +5,9 @@
     z-index: 0;
 }
 /******************** Common ********************/
+body {
+    background-color: blanchedalmond;
+}
 a {
     text-decoration: none;
 }
@@ -189,7 +192,7 @@ a {
 }
 
 /******************** Top link parts ********************/
-.top-board img {
+/* .top-board img {
     position: absolute;
     top: 100px;
     left: 50px;
@@ -206,6 +209,27 @@ a {
 }
 .top-blog img:hover {
     cursor: context-menu;
+} */
+.top-menu {
+    padding: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+.top-board span {
+    font-size: 130px;
+}
+.top-blog span {
+    font-size: 40px;
+    margin: 25%;
+}
+.top-contact span {
+    font-size: 20px;
+    margin-left: 50%;
+    margin-top: 20%;
+}
+.top-news span {
+    font-size: 60px;
+    margin: 70%;
 }
 /******************** Top link anime ********************/
 .anime1 {
@@ -394,4 +418,27 @@ footer {
     color: rgb(63, 62, 62);
     text-align: left;
 }
-
+/* 画面サイズ別CSS・タブレット*/
+@media screen and (max-width: 860px) {
+    .top-menu {
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .top-board span {
+        font-size: 500%;
+    }
+    .top-blog span {
+        font-size: 150%;
+        margin: 25%;
+    }
+    .top-contact span {
+        font-size: 75%;
+        margin-left: 35%;
+        margin-top: 20%;
+    }
+    .top-news span {
+        font-size: 300%;
+        margin: 50%;
+    }
+}
