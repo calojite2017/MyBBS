@@ -18,6 +18,7 @@
             </h1>
         <div>
         <p>投稿日：{{ $post->created_at }}</p>
+        <p>投稿者：{{ $post->name }}</p>
         <div class="post-body">
             {{-- htmlタグをe()で文字実態参照化->nl2br()で改行をbrタグ化->{!!でタグや文字実体参照が反映されるように --}}
             <p>{!! nl2br(e($post->body)) !!}</p>
