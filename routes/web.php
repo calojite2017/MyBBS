@@ -5,6 +5,7 @@ use App\Http\Controllers\TopPageServer;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\NewsController;
 use App\Models\Company;
 
 /*

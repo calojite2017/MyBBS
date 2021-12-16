@@ -11,7 +11,7 @@ class TopPageServer extends Controller
     public function index()
     {
         // $news = News::all();
-        $news = $this->NewsList(limit: 4);
+        $news = $this->NewsList(limit: 8);
         $params = [
             'news_list' => $news,
         ];
