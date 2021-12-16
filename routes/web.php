@@ -5,6 +5,7 @@ use App\Http\Controllers\TopPageServer;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\NewsController;
 use App\Models\Company;
 
 /*
@@ -21,6 +22,9 @@ use App\Models\Company;
 // トップページ
 Route::get('/', [TopPageServer::class, 'index'])
     ->name('index');
+
+// 広告
+Route::get('news/{news_no}', [NewsController::class, 'detail'])->whereNumber('news_no')->name('news.detail');
 
 // 掲示板
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
