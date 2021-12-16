@@ -24,5 +24,9 @@
     <div class="news-list">
         <h1>News-list</h1>
     </div>
+
+    <div class="news-single">
+        @each('components.news.sales-info-card', $news_list, 'news')
+    </div>
 </article>
 @endsection

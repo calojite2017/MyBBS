@@ -22,6 +22,9 @@ use App\Models\Company;
 Route::get('/', [TopPageServer::class, 'index'])
     ->name('index');
 
+// 広告
+Route::get('news/{news_no}', [NewsController::class, 'detail'])->whereNumber('news_no')->name('news.detail');
+
 // 掲示板
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('posts/{post}', [PostController::class, 'show'])
