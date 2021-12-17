@@ -552,7 +552,7 @@ footer {
     border-radius: 20px;
     padding: 3%;
     /* margin-top: 100px; */
-    margin: 60px 30px;
+    margin: 60px 100px;
     display: flex;
     justify-content: center;
 }
@@ -599,7 +599,7 @@ footer {
 .news-detail .news-single {
     margin-top: 4%;
     display: flex;
-    justify-content: space-around;;
+    justify-content: center;
     flex-wrap: wrap;
     align-content: center;
     width: 100%;
