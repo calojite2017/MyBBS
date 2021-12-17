@@ -4,6 +4,8 @@
 
 @section('content')
 <article>
+    <div class="top-image" style="background-image: url("{{ asset('images/topimage2.jpg') }}">
+    </div>
     <div class="top-menu">
         <div class="top-board anime1">
             {{-- <a href="{{ route('posts.index') }}"><img src="{{ asset('images/board.svg') }}"></a> --}}

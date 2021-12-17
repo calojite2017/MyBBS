@@ -65,6 +65,10 @@ a {
 .common-back-link {
     font-family: 'Courier', sans-serif;
 }
+/******************** Top image ********************/
+/* .top-image {
+    background-image: url("../../public/images/topimage2.jpg");
+} */
 /******************** Title ********************/
 .top-title h1 {
     position: absolute;
