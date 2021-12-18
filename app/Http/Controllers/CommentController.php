@@ -11,12 +11,6 @@ class CommentController extends Controller
 {
     public function store(CommentRequest $request, Post $post)
     {
-        // $request->validate([
-        //     'body' => 'required',
-        // ],[
-        //     'body.required' => 'コメント本文は必須です。',
-        // ]);
-
         // コメントモデルのインスタンス作成
         $comment = new Comment();
         $comment->post_id = $post->id;

@@ -7,8 +7,8 @@
         <div class="company-info">
             <ul>
                 <li>所在地　〒{{ $c_post->value }} <a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('{{ $c_address->value }}'));return false;">{{ $c_address->value }}</a></li>
-                <a href=""><li>プライバシーポリシー</li></a>
-                <a href=""><li>会社概要</li></a>
+                <li class="company-info__link"><a href="{{ route('company', ['id' => $privacy->id]) }}">プライバシーポリシー</a></li>
+                <li class="company-info__link"><a href="{{ route('company', ['id' => $company->id]) }}">会社概要</a></li>
             </ul>
         </div>
     </div>

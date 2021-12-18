@@ -277,6 +277,9 @@ a {
     font-size: 65px;
     margin-left: 80%;
 }
+.top-menu a:visited {
+    color: inherit;
+}
 /* 画面サイズ別CSS・タブレット*/
 @media screen and (max-width: 860px) {
     .top-menu {
@@ -486,6 +489,19 @@ footer {
     width: 30%;
     margin: 0 auto;
 }
+#Ft .news-list {
+    margin-left: 3%;
+    font-family: 'Courier', sans-serif;
+    font-size: 18px;
+    color: rgb(63, 62, 62);
+    height: 80px;
+}
+#Ft .news-list h1 {
+    display: inline-block;
+    border: 0.4rem ridge rgba(159, 128, 148, 0.466);
+    border-radius: 10px;
+    padding: 5px 30px;
+}
 .company-info {
     font-family: 'Courier', sans-serif;
     margin: 30px;
@@ -494,19 +510,14 @@ footer {
     color: rgb(63, 62, 62);
     text-align: left;
 }
-#Ft .news-list {
-    margin-left: 3%;
-    font-family: 'Courier', sans-serif;
-    font-size: 18px;
-    color: rgb(63, 62, 62);
-    height: 30px;
+.company-info__link:hover {
+    /* color: rgba(94, 94, 8, 0.466); */
+    color: grey;
 }
-#Ft .news-list h1 {
-    display: inline-block;
-    border: 0.4rem ridge rgba(159, 128, 148, 0.466);
-    border-radius: 10px;
-    padding: 5px 30px;
-}
+.company-info a:visited{
+    color: inherit;
+  }
+
 /******************** news-list ********************/
 .toppage-contents .news-list {
     margin-left: 3%;
@@ -608,4 +619,14 @@ footer {
 .news-detail .news-single .news-bibl {
     width: 12%;
 }
-
+/******************** companyページ ********************/
+.company-contents {
+    margin: 4%;
+    padding: 3%;
+    border: 1px dashed grey;
+    border-radius: 10px;
+}
+.company-contents h1 {
+    display: inline-block;
+    border-bottom: 5px solid grey;
+}

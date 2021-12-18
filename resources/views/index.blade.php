@@ -9,11 +9,9 @@
         </div>
         <div class="top-menu">
             <div class="top-board anime1">
-                {{-- <a href="{{ route('posts.index') }}"><img src="{{ asset('images/board.svg') }}"></a> --}}
                 <a href="{{ route('posts.index') }}"><span>BBS</span></a>
             </div>
             <div class="top-blog anime2">
-                {{-- <a href="{{ route('blogs.index') }}"><img src="{{ asset('images/blog.svg') }}"></a> --}}
                 <a href="{{ route('blogs.index') }}"><span>BLOG</span></a>
             </div>
             <div class="top-contact anime1">
