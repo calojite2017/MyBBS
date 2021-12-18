@@ -54,11 +54,12 @@ Route::get('blogs', [BlogController::class, 'index'])->name('blogs.index');
 Route::get('blogs/{blog}', [BlogController::class, 'show'])->name('blogs.show');
 
 // 共通変数
-View::composer('*', function($view)
+View::composer('components/footer', function($view)
 {
   $c_address = Company::where('id', 1)->first();
-  $view->with('c_address', $c_address);
-
   $c_post = Company::where('id', 2)->first();
-  $view->with('c_post', $c_post);
+  $privacy = Company::where('id', 3)->first();
+  $company = Company::where('id', 4)->first();
+
+  $view->with(['c_address' =>  $c_address, 'c_post' => $c_post, 'privacy' => $privacy, 'company' => $company ]);
 });
