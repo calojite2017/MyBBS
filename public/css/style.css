@@ -277,6 +277,9 @@ a {
     font-size: 65px;
     margin-left: 80%;
 }
+.top-menu a:visited {
+    color: inherit;
+}
 /* 画面サイズ別CSS・タブレット*/
 @media screen and (max-width: 860px) {
     .top-menu {
@@ -507,6 +510,14 @@ footer {
     color: rgb(63, 62, 62);
     text-align: left;
 }
+.company-info__link:hover {
+    /* color: rgba(94, 94, 8, 0.466); */
+    color: grey;
+}
+.company-info a:visited{
+    color: inherit;
+  }
+
 /******************** news-list ********************/
 .toppage-contents .news-list {
     margin-left: 3%;
@@ -608,4 +619,14 @@ footer {
 .news-detail .news-single .news-bibl {
     width: 12%;
 }
-
+/******************** companyページ ********************/
+.company-contents {
+    margin: 4%;
+    padding: 3%;
+    border: 1px dashed grey;
+    border-radius: 10px;
+}
+.company-contents h1 {
+    display: inline-block;
+    border-bottom: 5px solid grey;
+}

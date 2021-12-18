@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\CompanyController;
 use App\Models\Company;
 
 /*
@@ -63,3 +64,6 @@ View::composer('components/footer', function($view)
 
   $view->with(['c_address' =>  $c_address, 'c_post' => $c_post, 'privacy' => $privacy, 'company' => $company ]);
 });
+
+// フッター
+Route::get('company/{id}', [CompanyController::class, 'index'])->whereNumber('id')->name('company');
