@@ -486,6 +486,19 @@ footer {
     width: 30%;
     margin: 0 auto;
 }
+#Ft .news-list {
+    margin-left: 3%;
+    font-family: 'Courier', sans-serif;
+    font-size: 18px;
+    color: rgb(63, 62, 62);
+    height: 80px;
+}
+#Ft .news-list h1 {
+    display: inline-block;
+    border: 0.4rem ridge rgba(159, 128, 148, 0.466);
+    border-radius: 10px;
+    padding: 5px 30px;
+}
 .company-info {
     font-family: 'Courier', sans-serif;
     margin: 30px;
@@ -493,19 +506,6 @@ footer {
 .company-info li {
     color: rgb(63, 62, 62);
     text-align: left;
-}
-#Ft .news-list {
-    margin-left: 3%;
-    font-family: 'Courier', sans-serif;
-    font-size: 18px;
-    color: rgb(63, 62, 62);
-    height: 30px;
-}
-#Ft .news-list h1 {
-    display: inline-block;
-    border: 0.4rem ridge rgba(159, 128, 148, 0.466);
-    border-radius: 10px;
-    padding: 5px 30px;
 }
 /******************** news-list ********************/
 .toppage-contents .news-list {
