@@ -7,18 +7,22 @@
     <div class="toppage-contents">
         <div class="top-image">
         </div>
-        <div class="top-menu">
-            <div class="top-board anime1">
-                <a href="{{ route('posts.index') }}"><span>BBS</span></a>
+        <div class="toppage-contents__menu">
+            <div class="top-menu">
+                <div class="top-board anime1 top-menu__hover">
+                    <a href="{{ route('posts.index') }}"><span>BBS</span></a>
+                </div>
+                <div class="top-blog anime2 top-menu__hover">
+                    <a href="{{ route('blogs.index') }}"><span>BLOG</span></a>
+                </div>
+                <div class="top-contact anime1 top-menu__hover">
+                    <a href="#"><span>CONTACT</span></a>
+                </div>
+                <div class="top-news anime2 top-menu__hover">
+                    <a href="#"><span>NEWS</span></a>
+                </div>
             </div>
-            <div class="top-blog anime2">
-                <a href="{{ route('blogs.index') }}"><span>BLOG</span></a>
-            </div>
-            <div class="top-contact anime1">
-                <a href="#"><span>CONTACT</span></a>
-            </div>
-            <div class="top-news anime2">
-                <a href="#"><span>NEWS</span></a>
+            <div class="top-category">
             </div>
         </div>
         <div class="news-list">
