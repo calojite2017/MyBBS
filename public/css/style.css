@@ -251,31 +251,46 @@ a {
         top: 10px;
     }
 }
-
+/******************** toppage-contents__menu flex ********************/
+.toppage-contents__menu {
+    margin: 0 auto;
+    width: 97%;
+    border-bottom: 1px solid grey;
+    display: flex;
+}
+.top-category {
+    /* height: 98%; */
+    flex: 1.5;
+    border: 1px solid rgba(194, 185, 182, 0.5);
+    border-radius: 20px;
+    margin: 3%;
+    background-color: rgba(194, 185, 182, 0.5);
+}
 /******************** Top link parts ********************/
 .top-menu {
     font-family: 'Amatic SC', cursive;
     padding: 40px;
     width: 90%;
     margin: 0 auto;
-    border-bottom: 1px solid grey;
+    padding-left: 10%;
+    flex: 0.5;
 }
 .top-board span {
     font-size: 170px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 .top-blog span {
     font-size: 45px;
-    margin-left: 30%;
+    /* margin-left: 30%; */
 }
 .top-contact span {
     font-size: 25px;
-    margin-left: 50%;
-    margin-top: 20%;
+    /* margin-left: 50%;
+    margin-top: 20%; */
 }
 .top-news span {
     font-size: 65px;
-    margin-left: 80%;
+    /* margin-left: 80%; */
 }
 .top-menu a:visited {
     color: inherit;
@@ -288,21 +303,21 @@ a {
         margin: 0 auto;
     }
     .top-board span {
-        margin-left: 0px;
+        /* margin-left: 0px; */
         font-size: 80px;
     }
     .top-blog span {
         font-size: 30px;
-        margin-left: 25%;
+        /* margin-left: 25%; */
     }
     .top-contact span {
         font-size: 15px;
-        margin-left: 45%;
-        margin-top: 20%;
+        /* margin-left: 45%;
+        margin-top: 20%; */
     }
     .top-news span {
         font-size: 60px;
-        margin-left: 70%;
+        /* margin-left: 70%; */
     }
 }
 /******************** Top link anime ********************/
@@ -335,6 +350,29 @@ a {
     0% {
         transform: translate(0,-15px)
     }
+}
+/******************** Top link hover ********************/
+.top-menu__hover a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+.top-menu__hover a::after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.top-menu__hover  a:hover::after {
+    bottom: -4px;
+    opacity: 1;
+    visibility: visible;
 }
 /******************** Posts Parts  ********************/
 .posts-flex {
