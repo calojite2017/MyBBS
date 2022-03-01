@@ -62,7 +62,6 @@
                 <li><a href="{{ route('index') }}">TOPへ戻る</a></li>
             </ul>
         </div>
-    </div>
 </article>
 
 @include('components.footer')

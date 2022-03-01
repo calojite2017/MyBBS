@@ -68,6 +68,12 @@ class CompanyController extends Controller
             $contact->tel = $request->tel;
             $contact->save();
 
+            Mail::send('company.reminder', ['contact' => $request], function ($m) use ($request) {
+                $m->from('test@example.com', 'Your Application');
+
+                $m->to($request->mail, $request->name)->subject('Your Reminder!');
+            });
+
             // 重複送信の防止
             $request->session()->regenerateToken();
 
