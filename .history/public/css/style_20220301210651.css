@@ -708,15 +708,6 @@ footer {
 .company-detail__all {
     margin-left: 40px;
 }
-.company-detail__all h1 {
-    font-size: 2rem;
-    color:rgb(58, 58, 58);
-    text-align: center;
-}
-.company-detail__all h2 {
-    color:rgb(99, 99, 99);
-    text-align: center;
-}
 .company-detail__form {
     margin: 10% 5%;
 }

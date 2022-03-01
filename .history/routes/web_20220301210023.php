@@ -75,5 +75,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 Route::get('redirects',[LoginController::class, 'index']);//追記
 
-// contactページ
-Route::get('contact', [CompanyController::class, 'contact'])->name('contact');
+

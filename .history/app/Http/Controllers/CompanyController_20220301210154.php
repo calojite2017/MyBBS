@@ -27,6 +27,6 @@ class CompanyController extends Controller
 
     public function contact()
     {
-        return view('company.contact');
+        return view('contact');
     }
 }

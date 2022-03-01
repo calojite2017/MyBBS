@@ -20,13 +20,8 @@ class CompanyController extends Controller
         if (is_null($company)) {
             abort(404);
         }
-
+        
         return view('company.index')
             ->with(['company' => $company]);
-    }
-
-    public function contact()
-    {
-        return view('company.contact');
     }
 }
