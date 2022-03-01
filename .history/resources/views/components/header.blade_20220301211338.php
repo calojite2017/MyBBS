@@ -41,7 +41,7 @@
                         <a href="{{ route('blogs.index') }}">Blog</a>
                     </li>
                     <li>
-                        <a href="{{ route('contact') }}">Contact</a>
+                        <a href="{{ route('blogs.index') }}">Contact</a>
                     </li>
                     {{-- <li>
                         <a href="#">News</a>

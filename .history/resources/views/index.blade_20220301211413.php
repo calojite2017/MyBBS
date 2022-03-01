@@ -15,7 +15,7 @@
                     <a href="{{ route('blogs.index') }}"><span>BLOG</span></a>
                 </div>
                 <div class="top-contact anime1 top-menu__hover">
-                    <a href="{{ route('contact') }}"><span>CONTACT</span></a>
+                    <a href="{{ route('blogs.index') }}"><span>CONTACT</span></a>
                 </div>
                 <div class="top-news anime2 top-menu__hover">
                     <a href="#news-list"><span>NEWS</span></a>
