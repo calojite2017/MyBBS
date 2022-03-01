@@ -1,7 +1,8 @@
-@include('layouts.main')
+@extends('layouts.main')
 
-@include('components.header')
+@section('title','Add Board!')
 
+@section('content')
 <article>
     <div class="board contents">
         <div class="common-title">
@@ -49,5 +50,4 @@
         </div>
     </div>
 </article>
-
-@include('components.footer')
+@endsection

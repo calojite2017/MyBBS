@@ -1,7 +1,6 @@
 @include('layouts.main')
 
 @include('components.header')
-
 <article>
     <div class="blogs contents">
         <div class="common-title">
@@ -16,5 +15,4 @@
         </div>
     </div>
 </article>
-
-@include('components.footer')
+@endsection

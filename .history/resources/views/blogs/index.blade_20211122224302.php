@@ -1,7 +1,8 @@
-@include('layouts.main')
+@extends('layouts.main')
 
-@include('components.header')
+@section('title','Blogs')
 
+@section('content')
 <article>
     <div class="blogs contents">
         <div class="common-title">
@@ -22,6 +23,4 @@
         </div>
     </div>
 </article>
-
-@include('components.footer')
-
+@endsection

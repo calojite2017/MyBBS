@@ -1,7 +1,8 @@
-@include('layouts.main')
+@extends('layouts.main')
 
-@include('components.header')
+@section('title', $post->title)
 
+@section('content')
 <article>
     <div class="posts contents">
         <div class="common-title">
@@ -92,5 +93,4 @@
         }
     </script>
 </article>
-
-@include('components.footer')
+@endsection

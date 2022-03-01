@@ -1,7 +1,8 @@
-@include('layouts.main')
+@extends('layouts.main')
 
-@include('components.header')
+@section('title',$news->title)
 
+@section('content')
 <article>
     <div class="news-detail">
         <div class="detail-property">
@@ -18,5 +19,4 @@
         </div>
     </div>
 </article>
-
-@include('components.footer')
+@endsection

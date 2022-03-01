@@ -8,5 +8,4 @@
         <p>{!! nl2br($company->value) !!}</p>
     </div>
 </article>
-
-@include('components.footer')
+@endsection
