@@ -1,0 +1,23 @@
+FROM php:8.0-apache
+
+WORKDIR /var/www/html
+
+RUN apt-get update && apt-get install -y \
+            zip \
+            unzip \
+            npm \
+            vim \
+    && curl -sS https://getcomposer.org/installer | php \
+    && mv composer.phar /usr/local/bin/composer \
+    && docker-php-ext-install pdo_mysql \
+    && composer install --prefer-dist \
+    && a2enmod rewrite
+
+
+RUN php artisan cache:clear \
+    && php artisan config:clear \
+    && php artisan route:clear \
+    && php artisan view:clear
+
+RUN composer require laravel/sanctum
+RUN chmod -R 777 /var/www/html

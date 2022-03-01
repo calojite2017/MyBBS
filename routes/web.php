@@ -67,3 +67,7 @@ View::composer('components/footer', function($view)
 
 // フッター
 Route::get('company/{id}', [CompanyController::class, 'index'])->whereNumber('id')->name('company');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
