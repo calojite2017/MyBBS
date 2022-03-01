@@ -12,7 +12,7 @@
                     @forelse ($blogs as $blog)
                                 <div class="blogs-item">
                                 <a href="{{ route('blogs.show', $blog) }}"><p>
-                                {{ $blog->created_at }}　{{ $blog->title }}</p>
+                                {{ $blog->title }}{{ $blog->title }}</p>
                                 </a>
                             </div>
                     @empty

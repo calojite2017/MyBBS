@@ -18,7 +18,7 @@
                     <a href="#"><span>CONTACT</span></a>
                 </div>
                 <div class="top-news anime2 top-menu__hover">
-                    <a href="#news-list"><span>NEWS</span></a>
+                    <a href="#"><span>NEWS</span></a>
                 </div>
             </div>
             <div class="top-category">
