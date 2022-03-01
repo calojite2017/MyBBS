@@ -7,7 +7,6 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\Auth\LoginController;
 use App\Models\Company;
 
 /*
