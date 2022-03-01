@@ -766,10 +766,10 @@ footer {
 }
 .confirm__detail {
     background-color: rgba(15, 130, 153, 0.2);
-    margin: 10px;
+    margin-left: 3%;
     border: solid grey;
     border-radius: 10px;
-    padding: 10px;
+    padding: 3%;
 }
 .confirm__detail li {
     font-size: 18px;
@@ -799,43 +799,4 @@ footer {
     margin: 35px 15px 0 15px;
     padding: 5px;
     width: 10%;
-}
-/******************** form送信後ページ ********************/
-.send__contents h2 {
-    margin: 5%;
-}
-.send__contents li {
-    list-style: none;
-    font-size: 17px;
-    margin-left: 5%
-}
-.send__contents label {
-    display: inline-block;
-    width: 35%;
-}
-.send__contents__body {
-    margin: 10px;
-    padding: 5px;
-    border-radius: 7px;
-    border: dashed rgba(57, 57, 57, 0.5);
-}
-.send__contents__body p {
-    margin-left: 5%;
-}
-.information-detail__button li {
-    list-style: none;
-}
-@media screen and (max-width: 480px) {
-    .send__contents h2 {
-        font-size: 16px;
-        margin: 5%;
-    }
-    .send__contents li {
-        list-style: none;
-        font-size: 11px;
-        margin-left: 3%
-    }
-    .information-detail__button li {
-        list-style: none;
-    }
 }

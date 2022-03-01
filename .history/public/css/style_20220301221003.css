@@ -800,12 +800,11 @@ footer {
     padding: 5px;
     width: 10%;
 }
-/******************** form送信後ページ ********************/
+/******************** 12/10 フォーム送信後ページ ********************/
 .send__contents h2 {
     margin: 5%;
 }
 .send__contents li {
-    list-style: none;
     font-size: 17px;
     margin-left: 5%
 }
@@ -814,16 +813,12 @@ footer {
     width: 35%;
 }
 .send__contents__body {
-    margin: 10px;
-    padding: 5px;
+    padding: 3%;
     border-radius: 7px;
     border: dashed rgba(57, 57, 57, 0.5);
 }
 .send__contents__body p {
     margin-left: 5%;
-}
-.information-detail__button li {
-    list-style: none;
 }
 @media screen and (max-width: 480px) {
     .send__contents h2 {
@@ -831,11 +826,7 @@ footer {
         margin: 5%;
     }
     .send__contents li {
-        list-style: none;
         font-size: 11px;
         margin-left: 3%
-    }
-    .information-detail__button li {
-        list-style: none;
     }
 }
