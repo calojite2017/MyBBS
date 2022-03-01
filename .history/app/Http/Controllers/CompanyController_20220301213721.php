@@ -51,12 +51,12 @@ class CompanyController extends Controller
     }
 
 
-    // テーブル格納用
+    // テーブル
     public function store(Request $request)
     {
         // 戻るボタンが押された場合
         if ($request->get('back')) {
-            return redirect()->route('contact')->withInput();
+            return redirect()->route('company.contact')->withInput();
         } else {
             $contact = new Contact();
             $contact->formkinds = $request->formkinds;

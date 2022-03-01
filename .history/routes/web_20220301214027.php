@@ -77,6 +77,7 @@ Route::get('redirects',[LoginController::class, 'index']);//追記
 
 // contactページ
 Route::get('contact', [CompanyController::class, 'contact'])->name('contact');
+// 11/17 お問い合わせフォーム用 12/9更新
 Route::post('company/confirm', [CompanyController::class, 'confirm'])->name('contact.confirm');
 Route::get('company/send', [CompanyController::class, 'send'])->name('contact.send');
 Route::post('company/store', [CompanyController::class, 'store'])->name('contact.store');

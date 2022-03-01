@@ -11,7 +11,7 @@
                 <h2>ぜひ、お気軽にお問い合わせください。</h2>
             </div>
             {{-- フォームの送り先↓↓ --}}
-            <form action="{{ route('contact.confirm') }}" method="POST" class="contact-detail__form" id="form1">
+            <form action="{{#}}" method="POST" class="contact-detail__form" id="form1">
                 @csrf
                 <div class="form-kinds">
                     <p>お問い合わせ項目</p>

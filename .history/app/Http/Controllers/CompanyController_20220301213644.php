@@ -25,13 +25,12 @@ class CompanyController extends Controller
             ->with(['company' => $company]);
     }
 
-    // フォーム
     public function contact()
     {
         return view('company.contact');
     }
 
-    //  フォーム確認ページ
+        // お問い合わせフォーム 投稿内容を表示するページ
     public function confirm(Request $request) {
 
         $validated = $request->validate([
@@ -51,12 +50,12 @@ class CompanyController extends Controller
     }
 
 
-    // テーブル格納用
+    // 12/9 テーブルストア用
     public function store(Request $request)
     {
         // 戻るボタンが押された場合
         if ($request->get('back')) {
-            return redirect()->route('contact')->withInput();
+            return redirect()->route('company.contact')->withInput();
         } else {
             $contact = new Contact();
             $contact->formkinds = $request->formkinds;
