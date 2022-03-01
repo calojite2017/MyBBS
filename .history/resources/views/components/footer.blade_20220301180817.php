@@ -1,4 +1,4 @@
-</body>
+<body>
 <footer>
     <div id="Ft">
         {{-- <img src="{{ asset('images/logo.jpg') }}"> --}}

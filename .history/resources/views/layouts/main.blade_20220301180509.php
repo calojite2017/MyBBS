@@ -18,5 +18,9 @@
     @endif
 </head>
 <body>
-
+    {{-- @include('components.header')
+    @yield('content')
+    <x-footer />
+</body>
+</html> --}}
 

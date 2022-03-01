@@ -4,7 +4,6 @@
         <div class="top-title">
             <h1><a href="{{ route('index') }}">My BBS</a></h1>
         </div>
-        {{-- ログインリンク --}}
         <div class="login-all">
             <div class="r-button">
                 <a href="{{ route('register') }}">新規登録</a>

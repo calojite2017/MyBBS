@@ -4,15 +4,7 @@
         <div class="top-title">
             <h1><a href="{{ route('index') }}">My BBS</a></h1>
         </div>
-        {{-- ログインリンク --}}
-        <div class="login-all">
-            <div class="r-button">
-                <a href="{{ route('register') }}">新規登録</a>
-            </div>
-            <div class="l-button">
-                <a href="{{ route('login') }}">ログイン</a>
-            </div>
-        </div>
+        
         {{-- ハンバーガーメニュー --}}
         <div class="hamburger-menu">
             <input type="checkbox" id="menu-btn-check">

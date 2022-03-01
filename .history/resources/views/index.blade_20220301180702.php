@@ -2,6 +2,9 @@
 
 @include('components.header')
 
+{{-- @section('title','TOP')
+
+@section('content') --}}
 <article>
     <div class="toppage-contents">
         <div class="top-image">
@@ -32,5 +35,5 @@
         </div>
     </div>
 </article>
-
 @include('components.footer')
+@endsection

@@ -17,6 +17,11 @@
     <title>My BBS</title>
     @endif
 </head>
-<body>
 
+<body>
+    @include('components.main')
+    @yield('content')
+    <x-footer />
+</body>
+</html>
 

@@ -32,5 +32,4 @@
         </div>
     </div>
 </article>
-
 @include('components.footer')
