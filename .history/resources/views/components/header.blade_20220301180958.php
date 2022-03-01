@@ -4,14 +4,9 @@
         <div class="top-title">
             <h1><a href="{{ route('index') }}">My BBS</a></h1>
         </div>
-        {{-- ログイン・ログアウトリンク --}}
+        {{-- ログインリンク --}}
         @if(Auth::check())
-        <div class="logout-button">
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button style="float: right; margin-top: 10px;"sr type="submit"><span>ログアウト</span></button>
-            </form>
-        </div>
+        
         @else
         <div class="login-all">
             <div class="r-button">
