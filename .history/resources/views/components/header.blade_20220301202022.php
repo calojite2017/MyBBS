@@ -5,7 +5,7 @@
             <h1><a href="{{ route('index') }}">My BBS</a></h1>
         </div>
         {{-- ログイン・ログアウトリンク --}}
-        <div class="login-button__all">
+        <div class="login-all">
             @if(Auth::check())
             <div class="logout-button">
                 <form method="POST" action="{{ route('logout') }}">

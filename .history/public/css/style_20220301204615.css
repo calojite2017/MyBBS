@@ -681,6 +681,9 @@ footer {
     background-color: grey;
     box-shadow: 2px 2px black;
 }
+.login-button__register:active {
+    box-shadow: none;
+}
 .login-button__login {
     display: inline-block;
     border: 1px solid grey;

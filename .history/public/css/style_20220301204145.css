@@ -668,9 +668,9 @@ footer {
     color: white;
 }
 .login-button__all a,
-.login-button__all a:visited,
-.login-button__all a:hover,
-.login-button__all a:active {
+a:visited,
+a:hover,
+a:active {
   color: inherit;
 }
 .login-button__register {
@@ -679,7 +679,6 @@ footer {
     border-radius: 5px;
     padding: 3px 10px;
     background-color: grey;
-    box-shadow: 2px 2px black;
 }
 .login-button__login {
     display: inline-block;
@@ -687,12 +686,10 @@ footer {
     border-radius: 5px;
     padding: 3px 10px;
     background-color: grey;
-    box-shadow: 2px 2px black;
 }
 .logout-button button {
     border-color: grey;
     border-radius: 5px;
     padding: 3px 10px;
     background-color: grey;
-    color: white;
 }

@@ -687,7 +687,6 @@ footer {
     border-radius: 5px;
     padding: 3px 10px;
     background-color: grey;
-    box-shadow: 2px 2px black;
 }
 .logout-button button {
     border-color: grey;

@@ -5,7 +5,7 @@
             <h1><a href="{{ route('index') }}">My BBS</a></h1>
         </div>
         {{-- ログイン・ログアウトリンク --}}
-        <div class="login-button__all">
+        <div class="login-all">
             @if(Auth::check())
             <div class="logout-button">
                 <form method="POST" action="{{ route('logout') }}">
@@ -15,10 +15,10 @@
             </div>
             @else
             <div class="login-button">
-                <div class="login-button__register">
+                <div class="login-button">
                     <a href="{{ route('register') }}">新規登録</a>
                 </div>
-                <div class="login-button__login">
+                <div class="l-button">
                     <a href="{{ route('login') }}">ログイン</a>
                 </div>
             </div>
