@@ -32,7 +32,7 @@
                 </label>
             </div>
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" style="margin-right: 10px;" href="{{ route('register') }}">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" style="margin" href="{{ route('register') }}">
                     {{ __('新規登録はこちら') }}
                 </a>
                 @if (Route::has('password.request'))
