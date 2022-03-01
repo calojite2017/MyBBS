@@ -535,14 +535,8 @@ footer {
     font-family: 'Courier', sans-serif;
     margin: 30px;
 }
-.company-info a,
-.company-info a:visited,
-.company-info a:active {
-    color: inherit;
-}
-.company-info a:hover {
-    color: grey;
-}
+.company-info {
+』
 .company-info li {
     color: rgb(63, 62, 62);
     text-align: left;

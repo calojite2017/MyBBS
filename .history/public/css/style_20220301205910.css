@@ -538,10 +538,10 @@ footer {
 .company-info a,
 .company-info a:visited,
 .company-info a:active {
-    color: inherit;
+  color: inherit;
 }
 .company-info a:hover {
-    color: grey;
+    
 }
 .company-info li {
     color: rgb(63, 62, 62);
