@@ -18,7 +18,7 @@ class NewsController extends Controller
     public function detail($news_no)
     {
         $news_list = $this->news_repository->getNewsList(limit: 6);
-        $news = $this->news_repository->getNewsDetail($news_no);
+        $news = $this->getNewsDetail($news_no);
         if(is_null($news)){
             abort(404);
         }
