@@ -638,11 +638,9 @@ footer {
     background-color: white;
     border-radius: 20px;
     padding: 3%;
-    /* margin: 60px 100px; */
-    margin: 0 auto;
+    margin: 60px 100px;
     display: flex;
     justify-content: center;
-}
 @media screen and (max-width: 980px)  {
     .detail-property h2 {
         font-size: 16px;
@@ -682,6 +680,9 @@ footer {
 }
 .detail-property__image img {
     width: 80%;
+}
+.news-detail {
+    width: 100%;
 }
 .news-detail .news-single {
     margin-top: 4%;
