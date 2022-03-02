@@ -24,7 +24,7 @@ class CompanyController extends Controller
         // )
         //     ->where('id', $id)
         //     ->first();
-        $company = $this->company_repository->getCompanyDetails($id);
+        $company = $this->company_repository->getCompanyDetails();
 
         if (is_null($company)) {
             abort(404);

@@ -3,28 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Company;
 use App\Models\Contact;
-use App\Repositories\CompanyRepository;
 
 class CompanyController extends Controller
 {
-    protected $company_repository;
-
-    public function __construct(CompanyRepository $company_repository)
-    {
-        $this->company_repository = $company_repository;
-    }
-
     public function index($id)
     {
-        // $company = Company::select(
-        //     'id',
-        //     'title',
-        //     'value',
-        // )
-        //     ->where('id', $id)
-        //     ->first();
-        $company = $this->company_repository->getCompanyDetails($id);
+        $company = Company::select(
+            'id',
+            'title',
+            'value',
+        )
+            ->where('id', $id)
+            ->first();
 
         if (is_null($company)) {
             abort(404);

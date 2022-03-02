@@ -14,7 +14,6 @@ class BlogController extends Controller
     {
         $this->blog_repository = $blog_repository;
     }
-
     public function index()
     {
         $blogs = $this->blog_repository->getNewBlogs(limit: 3);
