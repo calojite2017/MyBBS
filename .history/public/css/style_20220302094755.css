@@ -65,9 +65,9 @@ a {
 .common-back-link {
     font-family: 'Courier', sans-serif;
 }
-/******************** pager ********************/
+/******************** common ********************/
 .pager {
-    margin: 40px 35px; }
+    margin: 40px auto; }
     .pager ul {
       display: flex; }
       .pager ul li:first-child {
@@ -81,10 +81,9 @@ a {
         .pager ul li a {
           display: block;
           padding: 0 5px;
-          color: rgb(87, 87, 87);
+          color: #000;
           text-decoration: none;
           border: 1px solid #707070;
-          border-radius: 5px;
           display: block;
           min-width: 30px;
           background: #fff; }
@@ -565,7 +564,7 @@ footer {
 }
 #Ft .news-list h1 {
     display: inline-block;
-    border: 0.2rem ridge rgba(145, 145, 145, 0.466);
+    border: 0.4rem ridge rgba(159, 128, 148, 0.466);
     border-radius: 10px;
     padding: 5px 30px;
 }

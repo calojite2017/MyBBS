@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Repositories;
+
+use App\Models\Post;
+use Illuminate\Support\Facades\DB;
+
+
+class PostRepository
+{
+    public function getNewBlogs($limit=false)
+    {
+        $blogs_query =  Blog::latest();
+
+            return $blogs_query->paginate($limit);
+    }
+}

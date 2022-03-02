@@ -18,8 +18,8 @@ class PostController extends Controller
     public function index()
     {
         // 全てのレコードを抽出 created_atをdescにorderByした状態で。
-        // $posts = Post::latest()->get();
-        $posts = $this->post_repository->getNewPosts(limit: 5);
+        $posts = Post::latest()->get();
+        $posts = Post::latest()->get();
 
         return view('posts.index')
             ->with(['posts' => $posts]);

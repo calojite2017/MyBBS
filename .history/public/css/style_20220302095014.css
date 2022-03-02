@@ -67,7 +67,7 @@ a {
 }
 /******************** pager ********************/
 .pager {
-    margin: 40px 35px; }
+    margin: 40px 30px; }
     .pager ul {
       display: flex; }
       .pager ul li:first-child {
@@ -565,7 +565,7 @@ footer {
 }
 #Ft .news-list h1 {
     display: inline-block;
-    border: 0.2rem ridge rgba(145, 145, 145, 0.466);
+    border: 0.4rem ridge rgba(159, 128, 148, 0.466);
     border-radius: 10px;
     padding: 5px 30px;
 }

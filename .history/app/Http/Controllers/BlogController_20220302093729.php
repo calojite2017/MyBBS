@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
-use App\Repositories\BlogRepository;
+use App\RepositoriesBlog;
 
 class BlogController extends Controller
 {
@@ -17,7 +17,7 @@ class BlogController extends Controller
     public function index()
     {
         // $blogs = Blog::latest()->get();
-        $blogs = $this->blog_repository->getNewBlogs(limit: 3);
+        $blogs = $this->blog_repository->getNewBlogs(limit: 3);;
 
         return view('blogs.index')
             ->with(['blogs' => $blogs]);
