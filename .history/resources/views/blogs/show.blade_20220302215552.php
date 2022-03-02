@@ -9,7 +9,7 @@
             <h1>{{ $blog->title }}</h1>
         <div>
         <div class="common-body">
-            <p>{!! nl2br(htmlspecialchars( $blog->body )) !!}
+            <p>{!! nl2br(htmlspecialchars( $blog->body)) !!}
 
         </div>
         <div class="common-back-link">
