@@ -283,11 +283,8 @@ a {
     font-size: 65px;
     /* margin-left: 80%; */
 }
-.top-menu a,
-.top-menu a:visited,
-.top-menu a:hover
-.top-menu a:active {
-    color: rgb(60, 60, 60);
+.top-menu a:visited {
+    color: inherit;
 }
 /* 画面サイズ別CSS・タブレット*/
 @media screen and (max-width: 860px) {
@@ -296,10 +293,10 @@ a {
         width: 80%;
         margin: 0 auto;
     }
-    .top-menu a,
-    .top-menu a:visited,
-    .top-menu a:hover
-    .top-menu a:active {
+    ..top-menu a,
+    ..top-menu a:visited,
+    .company-info a:hover
+    .company-info a:active {
         color: inherit;
     }
     .top-board span {

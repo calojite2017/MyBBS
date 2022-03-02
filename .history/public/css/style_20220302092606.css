@@ -283,11 +283,14 @@ a {
     font-size: 65px;
     /* margin-left: 80%; */
 }
+.top-menu a:visited {
+    color: inherit;
+}
 .top-menu a,
 .top-menu a:visited,
 .top-menu a:hover
 .top-menu a:active {
-    color: rgb(60, 60, 60);
+    color: inherit;
 }
 /* 画面サイズ別CSS・タブレット*/
 @media screen and (max-width: 860px) {
