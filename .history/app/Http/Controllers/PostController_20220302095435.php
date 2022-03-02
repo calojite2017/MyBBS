@@ -9,17 +9,10 @@ use App\Repositories\PostRepository;
 
 class PostController extends Controller
 {
-    protected $post_repository;
-
-    public function __construct(PostRepository $post_repository)
-    {
-        $this->post_repository = $post_repository;
-    }
     public function index()
     {
         // 全てのレコードを抽出 created_atをdescにorderByした状態で。
-        // $posts = Post::latest()->get();
-        $posts = $this->post_repository->getNewPosts(limit: 5);
+        $posts = Post::latest()->get();
 
         return view('posts.index')
             ->with(['posts' => $posts]);

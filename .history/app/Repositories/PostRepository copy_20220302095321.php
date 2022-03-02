@@ -3,10 +3,10 @@
 namespace App\Repositories;
 
 use App\Models\Blog;
-// use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 
-class BlogRepository
+class PostRepository
 {
     public function getNewBlogs($limit=false)
     {

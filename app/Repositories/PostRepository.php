@@ -2,15 +2,15 @@
 
 namespace App\Repositories;
 
-use App\Models\Blog;
+use App\Models\Post;
 // use Illuminate\Support\Facades\DB;
 
 
-class BlogRepository
+class PostRepository
 {
-    public function getNewBlogs($limit=false)
+    public function getNewPosts($limit=false)
     {
-        $blogs_query =  Blog::latest();
+        $blogs_query =  Post::latest();
 
             return $blogs_query->paginate($limit);
     }

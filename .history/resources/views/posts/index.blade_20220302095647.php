@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    {{ $posts->links('components.pagenation') }}
+    {{ $blogs->links('components.pagenation') }}
 </article>
 
 @include('components.footer')
