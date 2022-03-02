@@ -563,12 +563,12 @@ footer {
     border-top: 1px solid grey;
     width: 97%;
     margin: 0 auto;
-    padding-bottom: 50px;
 }
 #Ft img {
     padding-top: 20px;
     width: 30%;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 #Ft .news-list {
     margin-left: 3%;

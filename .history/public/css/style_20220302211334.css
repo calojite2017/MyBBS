@@ -563,7 +563,6 @@ footer {
     border-top: 1px solid grey;
     width: 97%;
     margin: 0 auto;
-    padding-bottom: 50px;
 }
 #Ft img {
     padding-top: 20px;
@@ -576,6 +575,7 @@ footer {
     font-size: 18px;
     color: rgb(63, 62, 62);
     height: 80px;
+    margin^
 }
 #Ft .news-list h1 {
     display: inline-block;

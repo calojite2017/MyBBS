@@ -23,7 +23,6 @@ class TopPageServer extends Controller
         $news = $this->NewsList(limit: 8);
         $params = [
             'news_list' => $news,
-            'post_list' => $posts
         ];
 
         return view('index', $params);

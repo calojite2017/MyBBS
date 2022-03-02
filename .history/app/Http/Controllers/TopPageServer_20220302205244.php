@@ -18,14 +18,12 @@ class TopPageServer extends Controller
 
     public function index()
     {
-        $posts = $this->post_repository->getNewPosts(limit: 8);
 
         $news = $this->NewsList(limit: 8);
         $params = [
             'news_list' => $news,
-            'post_list' => $posts
         ];
-
+        // dd($params);
         return view('index', $params);
     }
 

@@ -21,15 +21,15 @@
                     <a href="#news-list"><span>NEWS</span></a>
                 </div>
             </div>
-            <div class="posts-all">
-                @each('components.posts.post-info-card', $post_list, 'post')
+            <div class="top-category">
+                @each('components.news.sales-info-card', $news_list, 'news')
             </div>
         </div>
         <div class="news-list" id="news-list">
             <h1>News-list</h1>
         </div>
         <div class="news-single">
-            @each('components.news.news-info-card', $news_list, 'news')
+            @each('components.news.sales-info-card', $news_list, 'news')
         </div>
     </div>
 </article>

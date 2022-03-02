@@ -290,7 +290,7 @@ a {
     background-color: rgba(194, 185, 182, 0.5);
 }
 .post-bibl {
-    margin: 10px auto;
+    margin: 0 auto;
     border: 1px solid white;
     background-color: white;
     border-radius: 10px;
@@ -298,6 +298,7 @@ a {
     font-family: 'Amatic SC', cursive;
     width: 150px;
     height: 150px;
+    align-content: space-around;
 }
 /******************** Top link parts ********************/
 .top-menu {
@@ -563,7 +564,6 @@ footer {
     border-top: 1px solid grey;
     width: 97%;
     margin: 0 auto;
-    padding-bottom: 50px;
 }
 #Ft img {
     padding-top: 20px;

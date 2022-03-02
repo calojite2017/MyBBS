@@ -21,7 +21,7 @@
                     <a href="#news-list"><span>NEWS</span></a>
                 </div>
             </div>
-            <div class="posts-all">
+            <div class="top-category">
                 @each('components.posts.post-info-card', $post_list, 'post')
             </div>
         </div>

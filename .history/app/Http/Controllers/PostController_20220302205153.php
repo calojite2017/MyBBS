@@ -15,7 +15,6 @@ class PostController extends Controller
     {
         $this->post_repository = $post_repository;
     }
-    
     public function index()
     {
         // 全てのレコードを抽出 created_atをdescにorderByした状態で。
