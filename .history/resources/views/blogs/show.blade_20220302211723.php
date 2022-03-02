@@ -5,7 +5,7 @@
 <article>
     <div class="blogs contents">
         <div class="common-title">
-            <p>{{ $blog->created_at }}
+            <p>{{ $blog->body }}
             <h1>{{ $blog->title }}</h1>
         <div>
         <div class="common-body">

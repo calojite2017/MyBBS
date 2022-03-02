@@ -24,13 +24,16 @@ a {
     font-family: 'Courier', sans-serif;
     font-size: 27px;
     border-bottom: 1px solid grey;
+    padding-left: 10px;
     display: flex;
     align-items: center;
 }
 .common-title h1 > a {
     font-size: 20px;
     font-weight: normal;
-    margin-left: auto;
+    /* margin-left: auto; */
+    /* padding-top: 3%;
+    padding-right: 3%; */
 }
 .common-body {
     font-family: 'Courier', sans-serif;
