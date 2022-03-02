@@ -1,0 +1,893 @@
+/******************** header ********************/
+#Hd {
+    height: 150px;
+    font-family: 'Amatic SC', cursive;
+    z-index: 0;
+}
+/******************** Common ********************/
+body {
+    background-color: rgba(211, 196, 205, 0.5);
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+.contents {
+    margin: 10px 40px;
+    font-family: 'Courier', sans-serif;
+}
+.common-title {
+    margin-top: 50px;
+}
+.common-title h1 {
+    color: grey;
+    font-family: 'Courier', sans-serif;
+    font-size: 27px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+}
+.common-title h1 > a {
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: auto;
+}
+.common-body {
+    font-family: 'Courier', sans-serif;
+    font-size: 25px;
+}
+.common-body li {
+    list-style: none;
+}
+.common-body li a {
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+}
+.common-body li a:hover{
+    color: rgba(94, 94, 8, 0.466);
+}
+.common-back-link {
+    margin: 20px;
+    text-align: right;
+}
+.common-back-link a {
+    font-family: 'Courier', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+    font-size: 15px
+}
+.common-back-link a:hover {
+    color: rgba(94, 94, 8, 0.466);
+}
+.common-back-link {
+    font-family: 'Courier', sans-serif;
+}
+/******************** pager ********************/
+.pager {
+    margin: 40px 35px; }
+    .pager ul {
+      display: flex; }
+      .pager ul li:first-child {
+        margin-left: auto; }
+      .pager ul li {
+        text-align: center;
+        font-size: 14px;
+        margin: 0 2px;
+        line-height: 30px;
+        list-style: none; }
+        .pager ul li a {
+          display: block;
+          padding: 0 5px;
+          color: rgb(87, 87, 87);
+          text-decoration: none;
+          border: 1px solid #707070;
+          border-radius: 5px;
+          display: block;
+          min-width: 30px;
+          background: #fff; }
+      .pager ul li.current a {
+        background: #f0f0f0; }
+
+  @media screen and (max-width: 960px) {
+    .pager ul li {
+      font-size: 13px; } }
+/******************** Top image ********************/
+.top-image {
+    height: 500px;
+    background-image: url("../images/topimage2.jpg");
+    background-size: cover;
+}
+@media screen and (max-width: 980px) {
+    .top-image {
+        height: 300px;
+        background-image: url("../images/topimage2.jpg");
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 580px) {
+    .top-image {
+        height: 180px;
+        background-image: url("../images/topimage2.jpg");
+        background-size: cover;
+    }
+}
+/******************** Title ********************/
+.top-title h1 {
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    /* border-bottom: 1px solid grey; */
+    font-size: 50px;
+    padding-bottom: 8px;
+    font-family: 'Courier', sans-serif;
+    /* font-family: 'Amatic SC', cursive; */
+}
+.top-title a {
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+}
+.top-title a:hover {
+    color: rgba(94, 94, 8, 0.466);
+}
+/******************** Global hamburger menu ********************/
+.menu-btn {
+    position: fixed;
+    right: -10px;
+    top: 80px;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    z-index: 90;
+    background-color: transparent;
+}
+.menu-btn span {
+    content: '';
+    display: block;
+    height: 6px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: grey;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 6px;
+    width: 35px;
+    border-radius: 3px;
+    background-color: grey;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.menu-btn span:before {
+    bottom: 12px;
+}
+.menu-btn span:after {
+    top: 12px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+    /* 11/13追加 メニュー内容装飾 */
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    /*leftの値を変更してメニューを画面外へ*/
+    left: 100%;
+    z-index: 80;
+    background-color: #ffffff;
+    /* アニメーション設定 */
+    transition: all 0.5s;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px grey;
+    list-style: none;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    box-sizing: border-box;
+    color:grey;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px grey;
+    border-right: solid 2px grey;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    left: 0%;
+}
+
+@media screen and (max-width: 860px) {
+    .menu-btn {
+        position: fixed;
+        right: 0;
+        top: 75px;
+        display: flex;
+        height: 100px;
+        width: 100px;
+        z-index: 90;
+        background-color: transparent;
+    }
+    .menu-btn span {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 28px;
+        border-radius: 3px;
+        background-color: grey;
+        position: absolute;
+        transition: all 0.5s ease;
+    }
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: grey;
+        position: absolute;
+        transition: all 0.5s ease;
+    }
+    .menu-btn span:before {
+        bottom: 10px;
+    }
+    .menu-btn span:after {
+        top: 10px;
+    }
+}
+/******************** toppage-contents__menu flex ********************/
+.toppage-contents__menu {
+    margin: 0 auto;
+    width: 97%;
+    border-bottom: 1px solid grey;
+    display: flex;
+}
+/******************** posts-all ********************/
+.posts-all {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1.5;
+    border: 1px solid rgba(194, 185, 182, 0.5);
+    border-radius: 20px;
+    margin: 3%;
+    padding: 3%;
+    background-color: rgba(194, 185, 182, 0.5);
+}
+.post-bibl {
+    margin: 10px auto;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    width: 150px;
+    height: 150px;
+}
+/******************** Top link parts ********************/
+.top-menu {
+    font-family: 'Amatic SC', cursive;
+    padding: 40px;
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 10%;
+    flex: 0.5;
+}
+.top-board span {
+    font-size: 170px;
+    /* margin-left: 30px; */
+}
+.top-blog span {
+    font-size: 45px;
+    /* margin-left: 30%; */
+}
+.top-contact span {
+    font-size: 25px;
+    /* margin-left: 50%;
+    margin-top: 20%; */
+}
+.top-news span {
+    font-size: 65px;
+    /* margin-left: 80%; */
+}
+.top-menu a,
+.top-menu a:visited,
+.top-menu a:hover
+.top-menu a:active {
+    color: rgb(60, 60, 60);
+}
+/* 画面サイズ別CSS・タブレット*/
+@media screen and (max-width: 860px) {
+    .top-menu {
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .top-menu a,
+    .top-menu a:visited,
+    .top-menu a:hover
+    .top-menu a:active {
+        color: inherit;
+    }
+    .top-board span {
+        /* margin-left: 0px; */
+        font-size: 80px;
+    }
+    .top-blog span {
+        font-size: 30px;
+        /* margin-left: 25%; */
+    }
+    .top-contact span {
+        font-size: 15px;
+        /* margin-left: 45%;
+        margin-top: 20%; */
+    }
+    .top-news span {
+        font-size: 60px;
+        /* margin-left: 70%; */
+    }
+}
+/******************** Top link anime ********************/
+.anime1 {
+    animation-name: turn1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+}
+@keyframes turn1 {
+    0% {
+        transform: translate(0,0px);
+    }
+    100% {
+        transform: translate(0,-15px)
+    }
+}
+.anime2 {
+    animation-name: turn2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+}
+@keyframes turn2 {
+    100% {
+        transform: translate(0,0px);
+    }
+    0% {
+        transform: translate(0,-15px)
+    }
+}
+/******************** Top link hover ********************/
+.top-menu__hover a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+.top-menu__hover a::after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.top-menu__hover  a:hover::after {
+    bottom: -4px;
+    opacity: 1;
+    visibility: visible;
+}
+/******************** Posts Parts  ********************/
+.posts-flex {
+    display: flex;
+    display:-webkit-flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.common-body .posts-flex .flex-item {
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    width: 130px;
+    height: 130px;
+}
+.common-body .posts-flex .flex-item p {
+    font-size: 14px;
+    vertical-align: top;
+}
+.common-body .posts-flex .flex-item h3 {
+    font-size: 16px;
+}
+.common-body .posts-flex a{
+    font-size: 15px;
+    font-family: 'Courier', sans-serif;
+    text-decoration: none;
+}
+/******************** show.php Post Body  ********************/
+.post-body p {
+    font-size: 17px;
+    font-family: 'Courier', sans-serif;
+    line-height: 1.6;
+}
+.post-body {
+    margin-bottom: 100px;
+}
+/******************** Blogs Parts  ********************/
+.common-body .blogs-body a{
+    font-size: 15px;
+    font-family: 'Courier', sans-serif;
+    text-decoration: none;
+}
+.blogs-flex {
+    display: flex;
+    display:-webkit-flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.common-body .blogs-flex .blogs-item {
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    margin: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+/******************** form  ********************/
+.board-form {
+font-family: 'Courier', sans-serif;
+}
+.board-form input,
+.board-form textarea {
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.board-form textarea {
+    height: 160px;
+}
+.board-form button {
+    padding: 4px 8px;
+    font-size: 14px;
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.form-button {
+    text-align: right;
+}
+/******************** error message ********************/
+.board-form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+}
+/******************** delete button ********************/
+.delete-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: normal;
+    color: grey;
+    cursor: pointer;
+    vertical-align: 2px;
+    font-family: 'Courier', sans-serif;
+}
+/******************** comment欄 ********************/
+.comments-form {
+    display: flex;
+}
+.comments-form :nth-child(3){
+    margin-left: 20px;
+}
+.comments-form :nth-child(4){
+    margin-left: 20px;
+}
+.comments-form > button {
+    margin-left: 8px;
+}
+.post-comments .error{
+    color: red;
+}
+.post-comments {
+    font-family: 'Courier', sans-serif;
+}
+.post-comments h2 {
+    font-size: 18px;
+    margin-top: 40px;
+}
+.post-comments li {
+    margin: 15px 0;
+}
+.delete-comments {
+    display: inline-block;
+}
+.delete-comments button {
+    border: none;
+    background-color: transparent;
+    vertical-align: 3px;
+    cursor: pointer;
+}
+/******************** footer ********************/
+footer {
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+}
+#Ft {
+    height: 200px;
+    padding-top: 2%;
+    border-top: 1px solid grey;
+    width: 97%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#Ft img {
+    padding-top: 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+#Ft .news-list {
+    margin-left: 3%;
+    font-family: 'Courier', sans-serif;
+    font-size: 18px;
+    color: rgb(63, 62, 62);
+    height: 80px;
+}
+#Ft .news-list h1 {
+    display: inline-block;
+    border: 0.2rem ridge rgba(145, 145, 145, 0.466);
+    border-radius: 10px;
+    padding: 5px 30px;
+}
+.company-info {
+    font-family: 'Courier', sans-serif;
+    margin: 30px;
+}
+.company-info a,
+.company-info a:visited,
+.company-info a:active {
+    color: inherit;
+}
+.company-info a:hover {
+    color: grey;
+}
+.company-info li {
+    color: rgb(63, 62, 62);
+    text-align: left;
+}
+.company-info__link:hover {
+    /* color: rgba(94, 94, 8, 0.466); */
+    color: grey;
+}
+.company-info a:visited{
+    color: inherit;
+  }
+
+/******************** news-list ********************/
+.toppage-contents .news-list {
+    margin-left: 3%;
+    font-family: 'Courier', sans-serif;
+    font-size: 20px;
+    color: rgb(63, 62, 62);
+    height: 30px;
+}
+.toppage-contents .news-list h1 {
+    display: inline-block;
+    padding: 0px 10px;
+}
+/******************** news-single ********************/
+.news-single {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+}
+.news-single .news-bibl {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    width: 20%;
+}
+.news-single .news-bibl img {
+    width: 92%;
+}
+.news-single .news-bibl__title {
+    padding: 0 2%;
+}
+@media screen and (max-width: 600px) {
+    .news-single .news-bibl__title {
+        font-size: 10px;
+    }
+}
+/******************** news.detail ********************/
+.detail-property {
+    width: 70%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 3%;
+    /* margin: 60px 100px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 980px)  {
+    .detail-property h2 {
+        font-size: 16px;
+    }
+    .detail-property p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 600px)  {
+    .detail-property {
+        margin-top: 60px;
+        flex-flow: column;
+    }
+    .detail-property h2 {
+        font-size: 10px;
+    }
+    .detail-property p {
+        font-size: 8px;
+    }
+    .detail-property__image {
+        margin: 0 auto;
+    }
+    .detail-property__image img {
+        width: 300px;
+    }
+    .detail-property__contents {
+        margin: 0 auto;
+    }
+}
+.detail-property h2 {
+    font-size:
+}
+.detail-property__image {
+    /* margin-top: 3%; */
+    text-align: center;
+    width: 50%;
+}
+.detail-property__image img {
+    margin: 30px;
+    width: 300px;
+}
+.news-detail .news-single {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    font-size: 12px;
+}
+.news-detail .news-single .news-bibl {
+    width: 12%;
+}
+/******************** companyページ ********************/
+.company-contents {
+    margin: 4%;
+    padding: 3%;
+    border: 1px dashed grey;
+    border-radius: 10px;
+}
+.company-contents h1 {
+    display: inline-block;
+    border-bottom: 5px solid grey;
+}
+/******************** login/logout ********************/
+.login-button__all {
+    font-family: 'Courier', sans-serif;
+    margin: 10px 30px;
+    text-align: right;
+    font-size: 0.9rem;
+    color: white;
+}
+.login-button__all a,
+.login-button__all a:visited,
+.login-button__all a:hover,
+.login-button__all a:active {
+  color: inherit;
+}
+.login-button__register {
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px 10px;
+    background-color: grey;
+    box-shadow: 2px 2px black;
+}
+.login-button__login {
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px 10px;
+    background-color: grey;
+    box-shadow: 2px 2px black;
+}
+.logout-button button {
+    border-color: grey;
+    border-radius: 5px;
+    padding: 3px 10px;
+    background-color: grey;
+    color: white;
+}
+/******************** form ********************/
+.company-detail__all {
+    margin-left: 40px;
+}
+.company-detail__all h1 {
+    font-size: 2rem;
+    color:rgb(58, 58, 58);
+    text-align: center;
+}
+.company-detail__all h2 {
+    color:rgb(99, 99, 99);
+    text-align: center;
+}
+.company-detail__form {
+    margin: 10% 5%;
+}
+.company-detail__contact__title {
+    margin: 5% 0%;
+}
+.company-detail__contact__title h2 {
+    font-size: 22px;
+}
+.form-value textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 90%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.form-detail input {
+    font-size: .8rem;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 90%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.contact-detail__form button {
+    border-radius: 5px;
+    background-color: rgb(219, 219, 219);
+    margin: 5% 0;
+    width: 15%;
+}
+.radio {
+    margin-left: 5%;
+}
+.radio:last-child {
+    margin-bottom: 2%;
+}
+.form-value span, .form-detail span {
+    color: orange;
+    font-size: .8rem;
+}
+/******************** form確認ページ********************/
+.confirm__comment {
+    margin: 7% 5%;
+}
+.confirm__detail {
+    background-color: rgba(15, 130, 153, 0.2);
+    margin: 10px;
+    border: solid grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+.confirm__detail li {
+    font-size: 18px;
+    margin-left: 5%;
+}
+.confirm__detail label {
+    font-weight: bold;
+    display: inline-block;
+    width: 40%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+}
+.confirm__detail h2 {
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 15px;
+    margin-bottom: 5%;
+}
+.form-button {
+    text-align: center;
+}
+.form-button button {
+    display: inline-block;
+    border: dashed rgba(57, 57, 57, 0.5);
+    border-radius: 5px;
+    background-color: rgb(219, 219, 219);
+    margin: 35px 15px 0 15px;
+    padding: 5px;
+    width: 10%;
+}
+/******************** form送信後ページ ********************/
+.send__contents h2 {
+    margin: 5%;
+}
+.send__contents li {
+    list-style: none;
+    font-size: 17px;
+    margin-left: 5%
+}
+.send__contents label {
+    display: inline-block;
+    width: 35%;
+}
+.send__contents__body {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 7px;
+    border: dashed rgba(57, 57, 57, 0.5);
+}
+.send__contents__body p {
+    margin-left: 5%;
+}
+.information-detail__button li {
+    list-style: none;
+}
+@media screen and (max-width: 480px) {
+    .send__contents h2 {
+        font-size: 16px;
+        margin: 5%;
+    }
+    .send__contents li {
+        list-style: none;
+        font-size: 11px;
+        margin-left: 3%
+    }
+    .information-detail__button li {
+        list-style: none;
+    }
+}
