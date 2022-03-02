@@ -24,4 +24,31 @@ class NewsController extends Controller
         // dd($news);
         return view('news.detail', ['news' => $news, 'news_list' => $news_list]);
     }
+
+    // private function getNewsDetail($news_no)
+    // {
+    //     return News::select(
+    //         'news_no',
+    //         'title',
+    //         'image',
+    //         'content',
+    //         'created_at',
+    //         'updated_at',
+    //     )
+    //         ->where('news_no', $news_no)
+    //         ->first();
+    // }
+
+    // private function getNewsList($limit)
+    // {
+    //     $query = News::select(
+    //         'news_no',
+    //         'title',
+    //         'image',
+    //         'content',
+    //         'created_at',
+    //         'updated_at',
+    //     );
+    //     return $query->take($limit)->get();
+    // }
 }

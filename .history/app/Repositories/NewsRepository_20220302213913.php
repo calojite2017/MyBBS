@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\News;
 // use Illuminate\Support\Facades\DB;
 
+
 class NewsRepository
 {
     public function getNewsList($limit)
