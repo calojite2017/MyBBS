@@ -10,7 +10,7 @@
             </div>
             <div class="detail-property__contents">
                 <h2>{{ $news->title }}</h2>
-                <p>{!! nl2br(htmlspecialchars($news->content)) !!}</p>
+                <p>{!! nl2br(htmlspecialchars($news->content) !!}</p>
             </div>
         </div>
         <div class="news-single">
