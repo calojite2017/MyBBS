@@ -31,4 +31,5 @@ class TopPageServer extends Controller
 
         return view('index', $params);
     }
+
 }

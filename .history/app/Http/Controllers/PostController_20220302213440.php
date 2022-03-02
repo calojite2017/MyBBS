@@ -43,7 +43,7 @@ class PostController extends Controller
     // $requestをPostRequest型に変更。PostRequestのバリデーションを自動に行ってくれる。
     public function store(PostRequest $request)
     {
-        // ポストインスタンスを作ってrequestデータを格納。
+        // ポストインスタンスを作る（コントローラではインスタンスが勝手にnewされない!?）
         $post = new Post();
         $post->title = $request->title;
         $post->name = $request->name;

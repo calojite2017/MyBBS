@@ -31,4 +31,19 @@ class TopPageServer extends Controller
 
         return view('index', $params);
     }
+
+    // private function NewsList($limit)
+    // {
+    //     $query = News::select(
+    //         'news_no',
+    //         'title',
+    //         'image',
+    //         'content',
+    //         'created_at',
+    //         'updated_at',
+    //     );
+
+    //     // return $query->orderBy('created_at', 'desc')->take($limit)->get();
+    //     return $query->take($limit)->get();
+    // }
 }
