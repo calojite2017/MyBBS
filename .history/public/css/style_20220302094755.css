@@ -65,7 +65,7 @@ a {
 .common-back-link {
     font-family: 'Courier', sans-serif;
 }
-/******************** pager ********************/
+/******************** common ********************/
 .pager {
     margin: 40px auto; }
     .pager ul {
@@ -81,10 +81,9 @@ a {
         .pager ul li a {
           display: block;
           padding: 0 5px;
-          color: rgb(87, 87, 87);
+          color: #000;
           text-decoration: none;
           border: 1px solid #707070;
-          border-radius: 5px;
           display: block;
           min-width: 30px;
           background: #fff; }

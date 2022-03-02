@@ -4,20 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
-use App\Repositories\BlogRepository;
 
 class BlogController extends Controller
 {
-    protected $blog_repository;
+    protected $book_repository;
 
-    public function __construct(BlogRepository $blog_repository)
+    public function __construct(BookRepository $book_repository, ReviewRepository $review_repository)
     {
-        $this->blog_repository = $blog_repository;
+        $this->book_repository = $book_repository;
+        $this->review_repository = $review_repository;
+
     }
     public function index()
     {
-        // $blogs = Blog::latest()->get();
-        $blogs = $this->blog_repository->getNewBlogs(limit: 3);;
+        $blogs = Blog::latest()->get();
 
         return view('blogs.index')
             ->with(['blogs' => $blogs]);
